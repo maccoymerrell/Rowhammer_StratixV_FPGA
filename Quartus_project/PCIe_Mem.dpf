@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="mem2_ck[1]" direction="Output" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem2_ck[0]" direction="Output" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem2_dqs[7]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem2_dqs[6]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem2_dqs[5]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem2_dqs[4]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem2_dqs[3]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem2_dqs[2]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem2_dqs[1]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem2_dqs[0]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem4_ck[1]" direction="Output" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem4_ck[0]" direction="Output" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem4_dqs[7]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem4_dqs[6]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem4_dqs[5]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem4_dqs[4]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem4_dqs[3]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem4_dqs[2]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem4_dqs[1]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem4_dqs[0]" direction="Bidir" source="Hierarchy Database" >
+		</pin>
+		<pin name="serial_pcie2_rx_in0" source="Pin Planner" >
+		</pin>
+		<pin name="serial_pcie2_rx_in1" source="Pin Planner" >
+		</pin>
+		<pin name="serial_pcie2_rx_in2" source="Pin Planner" >
+		</pin>
+		<pin name="serial_pcie2_rx_in3" source="Pin Planner" >
+		</pin>
+		<pin name="serial_pcie2_tx_out0" source="Pin Planner" >
+		</pin>
+		<pin name="serial_pcie2_tx_out1" source="Pin Planner" >
+		</pin>
+		<pin name="serial_pcie2_tx_out2" source="Pin Planner" >
+		</pin>
+		<pin name="serial_pcie2_tx_out3" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

@@ -1,0 +1,116 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.dmaster.timing_adt -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.dmaster.clk_rst -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.dmaster.b2p_adapter -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.dmaster.jtag_phy_embedded_in_jtag_master -pg 1
+preplace inst pcie_hip_avmm.alt_xcvr_reconfig_0 -pg 1 -lvl 3 -y 590
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.dmaster.timing_adt -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.c0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.as0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.dmaster.b2p -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.seq_bridge -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.oct0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0 -pg 1 -lvl 3 -y 190
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.dmaster.b2p -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1 -pg 1 -lvl 3 -y 960
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.dmaster.clk_src -pg 1
+preplace inst pcie_hip_avmm.clk_0 -pg 1 -lvl 2 -y 270
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.dmaster.p2b -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.seq_bridge -pg 1
+preplace inst pcie_hip_avmm.pcie_reconfig_driver_0 -pg 1 -lvl 2 -y 450
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.afi_reset_export -pg 1
+preplace inst pcie_hip_avmm.clk_1 -pg 1 -lvl 2 -y 1060
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.dmaster -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.dmaster.fifo -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.oct0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.dmaster -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.pll0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.c0.afi_reset -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.m0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.dmaster.p2b -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.c0.a0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.as0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.soft_reset -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.dmaster.jtag_phy_embedded_in_jtag_master -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.c0.a0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.afi_half_clk -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.afi_reset -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.c0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.c0.afi_half_clk -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.afi_clk -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.global_reset -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.c0.afi_half_clk -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.dmaster.transacto -pg 1
+preplace inst pcie_hip_avmm.avl_to_asmi_0 -pg 1 -lvl 3 -y 830
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.dmaster.clk_rst -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.dmaster.p2b_adapter -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.afi_clk -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.dll0 -pg 1
+preplace inst pcie_hip_avmm.DUT -pg 1 -lvl 1 -y 90
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.c0.afi_clk -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.pll_ref_clk -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.c0.afi_clk -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.dll0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.c0.afi_reset -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.pll_bridge -pg 1
+preplace inst pcie_hip_avmm -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst pcie_hip_avmm.move_engine_0 -pg 1 -lvl 2 -y 690
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.dmaster.transacto -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.dmaster.clk_src -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.c0.ng0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.c0.ng0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.pll_ref_clk -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.afi_reset_export -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.s0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.s0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.dmaster.b2p_adapter -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.global_reset -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.dmaster.fifo -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.p0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.csr_bridge -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.p0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.m0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.soft_reset -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.pll0 -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.afi_reset -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.pll_bridge -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.afi_half_clk -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_1.dmaster.p2b_adapter -pg 1
+preplace inst pcie_hip_avmm.mem_if_ddr3_emif_0.csr_bridge -pg 1
+preplace netloc POINT_TO_POINT<net_container>pcie_hip_avmm</net_container>(SLAVE)DUT.hip_status,(SLAVE)pcie_reconfig_driver_0.hip_status_drv) 1 0 2 220 520 NJ
+preplace netloc FAN_OUT<net_container>pcie_hip_avmm</net_container>(SLAVE)move_engine_0.clk,(MASTER)DUT.coreclkout,(SLAVE)pcie_reconfig_driver_0.pld_clk,(SLAVE)avl_to_asmi_0.clock) 1 1 2 540 840 NJ
+preplace netloc POINT_TO_POINT<net_container>pcie_hip_avmm</net_container>(MASTER)clk_1.clk,(SLAVE)mem_if_ddr3_emif_1.pll_ref_clk) 1 2 1 N
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)pcie_hip_avmm.reset) 1 0 2 NJ 480 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)DUT.npor,(SLAVE)pcie_hip_avmm.pcie_npor) 1 0 1 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)pcie_hip_avmm.pcie_refclock,(SLAVE)DUT.refclk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)DUT.hip_ctrl,(SLAVE)pcie_hip_avmm.hip_ctrl) 1 0 1 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)pcie_hip_avmm.memory_1,(SLAVE)mem_if_ddr3_emif_1.memory) 1 0 3 NJ 1030 NJ 1030 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)avl_to_asmi_0.conduit_end,(SLAVE)pcie_hip_avmm.avl_to_asmi_0_conduit_end) 1 0 3 NJ 860 NJ 860 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)pcie_hip_avmm.slow_mem,(SLAVE)move_engine_0.slow_master1) 1 0 2 NJ 780 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)pcie_hip_avmm.oct,(SLAVE)mem_if_ddr3_emif_0.oct) 1 0 3 NJ 460 NJ 360 NJ
+preplace netloc POINT_TO_POINT<net_container>pcie_hip_avmm</net_container>(SLAVE)alt_xcvr_reconfig_0.reconfig_mgmt,(MASTER)pcie_reconfig_driver_0.reconfig_mgmt) 1 2 1 940
+preplace netloc FAN_IN<net_container>pcie_hip_avmm</net_container>(SLAVE)mem_if_ddr3_emif_0.avl,(MASTER)DUT.Rxm_BAR2,(MASTER)move_engine_0.fast_master) 1 1 2 600 340 880
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)clk_1.clk_in,(SLAVE)pcie_hip_avmm.clk_1) 1 0 2 NJ 1070 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)clk_1.clk_in_reset,(SLAVE)pcie_hip_avmm.reset_1) 1 0 2 NJ 1090 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)pcie_reconfig_driver_0.reconfig_xcvr_rst,(SLAVE)pcie_hip_avmm.reconfig_xcvr_rst) 1 0 2 NJ 560 NJ
+preplace netloc FAN_IN<net_container>pcie_hip_avmm</net_container>(MASTER)DUT.Rxm_BAR4,(SLAVE)mem_if_ddr3_emif_1.avl,(MASTER)move_engine_0.slow_master) 1 1 2 580 820 860
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)pcie_hip_avmm.memory,(SLAVE)mem_if_ddr3_emif_0.memory) 1 0 3 NJ 40 NJ 260 NJ
+preplace netloc POINT_TO_POINT<net_container>pcie_hip_avmm</net_container>(SLAVE)pcie_reconfig_driver_0.hip_currentspeed,(SLAVE)DUT.hip_currentspeed) 1 0 2 200 500 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)pcie_hip_avmm.mgmt_clk,(SLAVE)alt_xcvr_reconfig_0.mgmt_clk_clk) 1 0 3 NJ 600 NJ 600 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)mem_if_ddr3_emif_1.oct,(SLAVE)pcie_hip_avmm.oct_1) 1 0 3 NJ 1050 NJ 1050 NJ
+preplace netloc POINT_TO_POINT<net_container>pcie_hip_avmm</net_container>(SLAVE)DUT.reconfig_to_xcvr,(SLAVE)alt_xcvr_reconfig_0.reconfig_to_xcvr) 1 0 3 260 680 NJ 680 NJ
+preplace netloc POINT_TO_POINT<net_container>pcie_hip_avmm</net_container>(SLAVE)pcie_reconfig_driver_0.reconfig_busy,(SLAVE)alt_xcvr_reconfig_0.reconfig_busy) 1 1 2 640 640 NJ
+preplace netloc POINT_TO_POINT<net_container>pcie_hip_avmm</net_container>(SLAVE)mem_if_ddr3_emif_0.pll_ref_clk,(MASTER)clk_0.clk) 1 2 1 940
+preplace netloc FAN_OUT<net_container>pcie_hip_avmm</net_container>(SLAVE)move_engine_0.rst,(SLAVE)avl_to_asmi_0.reset,(MASTER)DUT.nreset_status) 1 1 2 480 880 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)alt_xcvr_reconfig_0.mgmt_rst_reset,(SLAVE)pcie_hip_avmm.mgmt_rst) 1 0 3 NJ 620 NJ 620 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)DUT.hip_serial,(SLAVE)pcie_hip_avmm.hip_serial) 1 0 1 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)move_engine_0.fast_master1,(SLAVE)pcie_hip_avmm.fast_mem) 1 0 2 NJ 720 NJ
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)pcie_hip_avmm.clk,(SLAVE)clk_0.clk_in) 1 0 2 NJ 60 NJ
+preplace netloc FAN_OUT<net_container>pcie_hip_avmm</net_container>(MASTER)DUT.Rxm_BAR0,(SLAVE)mem_if_ddr3_emif_1.csr,(SLAVE)avl_to_asmi_0.s0,(SLAVE)mem_if_ddr3_emif_0.csr,(SLAVE)DUT.Cra) 1 0 3 200 80 600 220 900
+preplace netloc EXPORT<net_container>pcie_hip_avmm</net_container>(SLAVE)pcie_reconfig_driver_0.reconfig_xcvr_clk,(SLAVE)pcie_hip_avmm.reconfig_xcvr_clk) 1 0 2 NJ 540 NJ
+preplace netloc FAN_OUT<net_container>pcie_hip_avmm</net_container>(MASTER)clk_1.clk_reset,(SLAVE)mem_if_ddr3_emif_1.soft_reset,(SLAVE)mem_if_ddr3_emif_1.global_reset) 1 2 1 920
+preplace netloc POINT_TO_POINT<net_container>pcie_hip_avmm</net_container>(SLAVE)alt_xcvr_reconfig_0.reconfig_from_xcvr,(SLAVE)DUT.reconfig_from_xcvr) 1 0 3 240 660 NJ 660 NJ
+preplace netloc FAN_OUT<net_container>pcie_hip_avmm</net_container>(SLAVE)mem_if_ddr3_emif_0.global_reset,(MASTER)clk_0.clk_reset,(SLAVE)mem_if_ddr3_emif_0.soft_reset) 1 2 1 920
+levelinfo -pg 1 0 170 1250
+levelinfo -hier pcie_hip_avmm 180 290 670 1060 1240

@@ -1,0 +1,64 @@
+Info: Starting: Create simulation model
+Info: qsys-generate /home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=/home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi/simulation --family="Stratix V" --part=5SGXEA3K3F40C4
+Progress: Loading IPCORE/asmi.qsys
+Progress: Reading input file
+Progress: Adding asmi_parallel_0 [altera_asmi_parallel 16.0]
+Progress: Parameterizing module asmi_parallel_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: asmi: Generating asmi "asmi" for SIM_VERILOG
+Info: asmi_parallel_0: generating top-level entity asmi_asmi_parallel_0
+Info: asmi_parallel_0: "asmi" instantiated altera_asmi_parallel "asmi_parallel_0"
+Info: asmi: Done "asmi" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=/home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi/asmi.spd --output-directory=/home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=/home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi/asmi.spd --output-directory=/home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in /home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in /home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in /home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in /home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	1 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi/simulation/.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi.qsys --block-symbol-file --output-directory=/home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi --family="Stratix V" --part=5SGXEA3K3F40C4
+Progress: Loading IPCORE/asmi.qsys
+Progress: Reading input file
+Progress: Adding asmi_parallel_0 [altera_asmi_parallel 16.0]
+Progress: Parameterizing module asmi_parallel_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi.qsys --synthesis=VERILOG --output-directory=/home/teko/dfc/STRG_CARD_PCIE_DDR_DMA_NVME_SFL/IPCORE/asmi/synthesis --family="Stratix V" --part=5SGXEA3K3F40C4
+Progress: Loading IPCORE/asmi.qsys
+Progress: Reading input file
+Progress: Adding asmi_parallel_0 [altera_asmi_parallel 16.0]
+Progress: Parameterizing module asmi_parallel_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: asmi: Generating asmi "asmi" for QUARTUS_SYNTH
+Info: asmi_parallel_0: generating top-level entity asmi_asmi_parallel_0
+Info: asmi_parallel_0: "asmi" instantiated altera_asmi_parallel "asmi_parallel_0"
+Info: asmi: Done "asmi" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

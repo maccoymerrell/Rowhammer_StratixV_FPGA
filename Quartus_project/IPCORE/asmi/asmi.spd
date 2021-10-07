@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/asmi_asmi_parallel_0.v"
+   type="VERILOG"
+   library="asmi_parallel_0" />
+ <file path="simulation/asmi.v" type="VERILOG" />
+ <topLevel name="asmi" />
+ <deviceFamily name="stratixv" />
+</simPackage>

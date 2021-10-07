@@ -1,0 +1,18 @@
+# system info asmi on 2016.06.03.16:48:45
+system_info:
+name,value
+DEVICE,5SGXEA3K3F40C4
+DEVICE_FAMILY,Stratix V
+GENERATION_ID,1464990523
+#
+#
+# Files generated for asmi on 2016.06.03.16:48:45
+files:
+filepath,kind,attributes,module,is_top
+simulation/asmi.v,VERILOG,,asmi,true
+simulation/submodules/asmi_asmi_parallel_0.v,VERILOG,,asmi_asmi_parallel_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+asmi.asmi_parallel_0,asmi_asmi_parallel_0

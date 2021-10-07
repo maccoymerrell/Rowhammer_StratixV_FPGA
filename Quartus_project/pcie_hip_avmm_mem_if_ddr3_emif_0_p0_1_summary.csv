@@ -1,0 +1,42 @@
+Core: pcie_hip_avmm_mem_if_ddr3_emif_0_p0 - Instance: u0|mem_if_ddr3_emif_1
+Path, Setup Margin, Hold Margin
+"Address Command (Slow 850mV 85C Model)",0.36,0.39
+"Bus Turnaround Time (Slow 850mV 85C Model)",2.87,--
+"Core (Slow 850mV 85C Model)",0.253,0.126
+"Core Recovery/Removal (Slow 850mV 85C Model)",1.076,0.316
+"Postamble (Slow 850mV 85C Model)",0.326,0.326
+"Read Capture (Slow 850mV 85C Model)",0.157,0.122
+"Read Resync (Slow 850mV 85C Model)",1.98,15.315
+"Write (Slow 850mV 85C Model)",0.154,0.154
+"Write Leveling tDQSS (Slow 850mV 85C Model)",0.357,0.357
+"Write Leveling tDSS/tDSH (Slow 850mV 85C Model)",0.409,0.409
+"Address Command (Slow 850mV 0C Model)",0.404,0.4
+"Bus Turnaround Time (Slow 850mV 0C Model)",2.924,--
+"Core (Slow 850mV 0C Model)",0.265,0.228
+"Core Recovery/Removal (Slow 850mV 0C Model)",1.219,0.31
+"Postamble (Slow 850mV 0C Model)",0.305,0.305
+"Read Capture (Slow 850mV 0C Model)",0.172,0.137
+"Read Resync (Slow 850mV 0C Model)",2.035,15.364
+"Write (Slow 850mV 0C Model)",0.196,0.196
+"Write Leveling tDQSS (Slow 850mV 0C Model)",0.357,0.357
+"Write Leveling tDSS/tDSH (Slow 850mV 0C Model)",0.409,0.409
+"Address Command (Fast 850mV 85C Model)",0.432,0.409
+"Bus Turnaround Time (Fast 850mV 85C Model)",3.167,--
+"Core (Fast 850mV 85C Model)",0.128,0.076
+"Core Recovery/Removal (Fast 850mV 85C Model)",2.187,0.167
+"Postamble (Fast 850mV 85C Model)",0.37,0.37
+"Read Capture (Fast 850mV 85C Model)",0.194,0.17
+"Read Resync (Fast 850mV 85C Model)",2.396,15.77
+"Write (Fast 850mV 85C Model)",0.206,0.206
+"Write Leveling tDQSS (Fast 850mV 85C Model)",0.387,0.387
+"Write Leveling tDSS/tDSH (Fast 850mV 85C Model)",0.439,0.439
+"Address Command (Fast 850mV 0C Model)",0.476,0.388
+"Bus Turnaround Time (Fast 850mV 0C Model)",3.18,--
+"Core (Fast 850mV 0C Model)",0.129,0.116
+"Core Recovery/Removal (Fast 850mV 0C Model)",2.248,0.17
+"Postamble (Fast 850mV 0C Model)",0.334,0.334
+"Read Capture (Fast 850mV 0C Model)",0.201,0.177
+"Read Resync (Fast 850mV 0C Model)",2.393,15.76
+"Write (Fast 850mV 0C Model)",0.22,0.22
+"Write Leveling tDQSS (Fast 850mV 0C Model)",0.387,0.387
+"Write Leveling tDSS/tDSH (Fast 850mV 0C Model)",0.439,0.439

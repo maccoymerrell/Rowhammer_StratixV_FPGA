@@ -1,0 +1,412 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm.qsys --block-symbol-file --output-directory=/home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm --family="Stratix V" --part=5SGXEA3K3F40C4
+Progress: Loading IPCORE/pcie_hip_avmm.qsys
+Progress: Reading input file
+Progress: Adding DUT [altera_pcie_sv_hip_avmm 16.0]
+Progress: Parameterizing module DUT
+Progress: Adding alt_xcvr_reconfig_0 [alt_xcvr_reconfig 16.0]
+Progress: Parameterizing module alt_xcvr_reconfig_0
+Progress: Adding avl_to_asmi_0 [avl_to_asmi 1.0]
+Progress: Parameterizing module avl_to_asmi_0
+Progress: Adding clk_0 [clock_source 16.0]
+Progress: Parameterizing module clk_0
+Progress: Adding clk_1 [clock_source 16.0]
+Progress: Parameterizing module clk_1
+Progress: Adding mem_if_ddr3_emif_0 [altera_mem_if_ddr3_emif 16.0]
+Progress: Parameterizing module mem_if_ddr3_emif_0
+Progress: Adding mem_if_ddr3_emif_1 [altera_mem_if_ddr3_emif 16.0]
+Progress: Parameterizing module mem_if_ddr3_emif_1
+Progress: Adding move_engine_0 [move_engine 1.0]
+Progress: Parameterizing module move_engine_0
+Progress: Adding pcie_reconfig_driver_0 [altera_pcie_reconfig_driver 16.0]
+Progress: Parameterizing module pcie_reconfig_driver_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: pcie_hip_avmm.DUT: The application clock frequency (pld_clk) is 250 Mhz
+Info: pcie_hip_avmm.DUT: Family: Stratix V
+Info: pcie_hip_avmm.DUT: 6 reconfiguration interfaces are required for connection to the external reconfiguration controller and the reconfig driver
+Info: pcie_hip_avmm.DUT: Credit allocation in the 16 KBytes receive buffer:
+Info: pcie_hip_avmm.DUT: Posted    : header=50  data=358
+Info: pcie_hip_avmm.DUT: Non posted: header=56  data=0
+Info: pcie_hip_avmm.DUT: Completion: header=112 data=448
+Info: pcie_hip_avmm.DUT: TXS ADDRESS WIDTH is 64
+Info: pcie_hip_avmm.alt_xcvr_reconfig_0: reconfig_from_xcvr port width is 6*46 bits
+Info: pcie_hip_avmm.alt_xcvr_reconfig_0: reconfig_to_xcvr port width is 6*70 bits
+Info: pcie_hip_avmm.mem_if_ddr3_emif_0: Usage of shadow registers is enabled to improve multi-rank interface performance
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_0: CSR port can only be connected to debug GUI when using a CSR port connection with an internally connected JTAG Avalon Master.
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_0: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_0.pll_bridge: pll_bridge.pll_sharing cannot be both connected and exported
+Info: pcie_hip_avmm.mem_if_ddr3_emif_1: Usage of shadow registers is enabled to improve multi-rank interface performance
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_1: CSR port can only be connected to debug GUI when using a CSR port connection with an internally connected JTAG Avalon Master.
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_1: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_1.pll_bridge: pll_bridge.pll_sharing cannot be both connected and exported
+Warning: pcie_hip_avmm.DUT: DUT.MSI_Interface must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.DUT: DUT.MSI_Control must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.DUT: DUT.MSIX_Interface must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.DUT: DUT.INTX_Interface must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.DUT: DUT.reconfig_clk_locked must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.DUT: DUT.hip_pipe must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.status must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.pll_sharing must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_1: mem_if_ddr3_emif_1.status must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_1: mem_if_ddr3_emif_1.pll_sharing must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.move_engine_0: move_engine_0.rst1 must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.DUT: Interrupt sender DUT.CraIrq is not connected to an interrupt receiver
+Warning: pcie_hip_avmm.DUT: DUT.Rxm_BAR1 must be connected to an Avalon-MM slave
+Warning: pcie_hip_avmm.DUT: DUT.Txs must be connected to an Avalon-MM master
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.seq_debug must be connected to an Avalon-MM master
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_1: mem_if_ddr3_emif_1.seq_debug must be connected to an Avalon-MM master
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm.qsys --synthesis=VERILOG --output-directory=/home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis --family="Stratix V" --part=5SGXEA3K3F40C4
+Progress: Loading IPCORE/pcie_hip_avmm.qsys
+Progress: Reading input file
+Progress: Adding DUT [altera_pcie_sv_hip_avmm 16.0]
+Progress: Parameterizing module DUT
+Progress: Adding alt_xcvr_reconfig_0 [alt_xcvr_reconfig 16.0]
+Progress: Parameterizing module alt_xcvr_reconfig_0
+Progress: Adding avl_to_asmi_0 [avl_to_asmi 1.0]
+Progress: Parameterizing module avl_to_asmi_0
+Progress: Adding clk_0 [clock_source 16.0]
+Progress: Parameterizing module clk_0
+Progress: Adding clk_1 [clock_source 16.0]
+Progress: Parameterizing module clk_1
+Progress: Adding mem_if_ddr3_emif_0 [altera_mem_if_ddr3_emif 16.0]
+Progress: Parameterizing module mem_if_ddr3_emif_0
+Progress: Adding mem_if_ddr3_emif_1 [altera_mem_if_ddr3_emif 16.0]
+Progress: Parameterizing module mem_if_ddr3_emif_1
+Progress: Adding move_engine_0 [move_engine 1.0]
+Progress: Parameterizing module move_engine_0
+Progress: Adding pcie_reconfig_driver_0 [altera_pcie_reconfig_driver 16.0]
+Progress: Parameterizing module pcie_reconfig_driver_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: pcie_hip_avmm.DUT: The application clock frequency (pld_clk) is 250 Mhz
+Info: pcie_hip_avmm.DUT: Family: Stratix V
+Info: pcie_hip_avmm.DUT: 6 reconfiguration interfaces are required for connection to the external reconfiguration controller and the reconfig driver
+Info: pcie_hip_avmm.DUT: Credit allocation in the 16 KBytes receive buffer:
+Info: pcie_hip_avmm.DUT: Posted    : header=50  data=358
+Info: pcie_hip_avmm.DUT: Non posted: header=56  data=0
+Info: pcie_hip_avmm.DUT: Completion: header=112 data=448
+Info: pcie_hip_avmm.DUT: TXS ADDRESS WIDTH is 64
+Info: pcie_hip_avmm.alt_xcvr_reconfig_0: reconfig_from_xcvr port width is 6*46 bits
+Info: pcie_hip_avmm.alt_xcvr_reconfig_0: reconfig_to_xcvr port width is 6*70 bits
+Info: pcie_hip_avmm.mem_if_ddr3_emif_0: Usage of shadow registers is enabled to improve multi-rank interface performance
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_0: CSR port can only be connected to debug GUI when using a CSR port connection with an internally connected JTAG Avalon Master.
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_0: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_0.pll_bridge: pll_bridge.pll_sharing cannot be both connected and exported
+Info: pcie_hip_avmm.mem_if_ddr3_emif_1: Usage of shadow registers is enabled to improve multi-rank interface performance
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_1: CSR port can only be connected to debug GUI when using a CSR port connection with an internally connected JTAG Avalon Master.
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_1: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_1.pll_bridge: pll_bridge.pll_sharing cannot be both connected and exported
+Warning: pcie_hip_avmm.DUT: DUT.MSI_Interface must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.DUT: DUT.MSI_Control must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.DUT: DUT.MSIX_Interface must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.DUT: DUT.INTX_Interface must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.DUT: DUT.reconfig_clk_locked must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.DUT: DUT.hip_pipe must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.status must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.pll_sharing must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_1: mem_if_ddr3_emif_1.status must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_1: mem_if_ddr3_emif_1.pll_sharing must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.move_engine_0: move_engine_0.rst1 must be exported, or connected to a matching conduit.
+Warning: pcie_hip_avmm.DUT: Interrupt sender DUT.CraIrq is not connected to an interrupt receiver
+Warning: pcie_hip_avmm.DUT: DUT.Rxm_BAR1 must be connected to an Avalon-MM slave
+Warning: pcie_hip_avmm.DUT: DUT.Txs must be connected to an Avalon-MM master
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.seq_debug must be connected to an Avalon-MM master
+Warning: pcie_hip_avmm.mem_if_ddr3_emif_1: mem_if_ddr3_emif_1.seq_debug must be connected to an Avalon-MM master
+Info: pcie_hip_avmm: Generating pcie_hip_avmm "pcie_hip_avmm" for QUARTUS_SYNTH
+Info: Inserting clock-crossing logic between cmd_demux.src1 and cmd_mux_001.sink0
+Info: Inserting clock-crossing logic between cmd_demux.src2 and cmd_mux_002.sink0
+Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux.sink1
+Info: Inserting clock-crossing logic between rsp_demux_002.src0 and rsp_mux.sink2
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between cmd_demux_001.src0 and cmd_mux.sink1
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src1 and rsp_mux_001.sink0
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between cmd_demux_001.src0 and cmd_mux.sink1
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src1 and rsp_mux_001.sink0
+Info: DUT: add_fileset_file ./altera_xcvr_functions.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/altera_xcvr_functions.sv
+Info: DUT: add_fileset_file ./sv_pcs.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_pcs.sv
+Info: DUT: add_fileset_file ./sv_pcs_ch.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_pcs_ch.sv
+Info: DUT: add_fileset_file ./sv_pma.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_pma.sv
+Info: DUT: add_fileset_file ./sv_reconfig_bundle_to_xcvr.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_reconfig_bundle_to_xcvr.sv
+Info: DUT: add_fileset_file ./sv_reconfig_bundle_to_ip.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_reconfig_bundle_to_ip.sv
+Info: DUT: add_fileset_file ./sv_reconfig_bundle_merger.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_reconfig_bundle_merger.sv
+Info: DUT: add_fileset_file ./sv_rx_pma.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_rx_pma.sv
+Info: DUT: add_fileset_file ./sv_tx_pma.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_tx_pma.sv
+Info: DUT: add_fileset_file ./sv_tx_pma_ch.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_tx_pma_ch.sv
+Info: DUT: add_fileset_file ./sv_xcvr_h.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_xcvr_h.sv
+Info: DUT: add_fileset_file ./sv_xcvr_avmm_csr.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_xcvr_avmm_csr.sv
+Info: DUT: add_fileset_file ./sv_xcvr_avmm_dcd.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_xcvr_avmm_dcd.sv
+Info: DUT: add_fileset_file ./sv_xcvr_avmm.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_xcvr_avmm.sv
+Info: DUT: add_fileset_file ./sv_xcvr_data_adapter.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_xcvr_data_adapter.sv
+Info: DUT: add_fileset_file ./sv_xcvr_native.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_xcvr_native.sv
+Info: DUT: add_fileset_file ./sv_xcvr_plls.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_xcvr_plls.sv
+Info: DUT: add_fileset_file ./alt_xcvr_resync.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_resync.sv
+Info: DUT: add_fileset_file ./sv_hssi_10g_rx_pcs_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/rbc/sv_hssi_10g_rx_pcs_rbc.sv
+Info: DUT: add_fileset_file ./sv_hssi_10g_tx_pcs_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/rbc/sv_hssi_10g_tx_pcs_rbc.sv
+Info: DUT: add_fileset_file ./sv_hssi_8g_rx_pcs_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/rbc/sv_hssi_8g_rx_pcs_rbc.sv
+Info: DUT: add_fileset_file ./sv_hssi_8g_tx_pcs_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/rbc/sv_hssi_8g_tx_pcs_rbc.sv
+Info: DUT: add_fileset_file ./sv_hssi_8g_pcs_aggregate_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/rbc/sv_hssi_8g_pcs_aggregate_rbc.sv
+Info: DUT: add_fileset_file ./sv_hssi_common_pcs_pma_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/rbc/sv_hssi_common_pcs_pma_interface_rbc.sv
+Info: DUT: add_fileset_file ./sv_hssi_common_pld_pcs_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/rbc/sv_hssi_common_pld_pcs_interface_rbc.sv
+Info: DUT: add_fileset_file ./sv_hssi_pipe_gen1_2_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/rbc/sv_hssi_pipe_gen1_2_rbc.sv
+Info: DUT: add_fileset_file ./sv_hssi_pipe_gen3_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/rbc/sv_hssi_pipe_gen3_rbc.sv
+Info: DUT: add_fileset_file ./sv_hssi_rx_pcs_pma_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/rbc/sv_hssi_rx_pcs_pma_interface_rbc.sv
+Info: DUT: add_fileset_file ./sv_hssi_rx_pld_pcs_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/rbc/sv_hssi_rx_pld_pcs_interface_rbc.sv
+Info: DUT: add_fileset_file ./sv_hssi_tx_pcs_pma_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/rbc/sv_hssi_tx_pcs_pma_interface_rbc.sv
+Info: DUT: add_fileset_file ./sv_hssi_tx_pld_pcs_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/rbc/sv_hssi_tx_pld_pcs_interface_rbc.sv
+Info: DUT: add_fileset_file ./sv_xcvr_emsip_adapter.sv SYSTEM_VERILOG PATH ../../altera_pcie_pipe/sv/sv_xcvr_emsip_adapter.sv
+Info: DUT: add_fileset_file ./sv_xcvr_pipe_native.sv SYSTEM_VERILOG PATH ../../altera_pcie_pipe/sv/sv_xcvr_pipe_native.sv
+Info: DUT: "pcie_hip_avmm" instantiated altera_pcie_sv_hip_avmm "DUT"
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_xcvr_functions.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/altera_xcvr_functions.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_xcvr_h.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_xcvr_h.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_resync.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_resync.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_h.sv SYSTEM_VERILOG PATH .//alt_xcvr_reconfig_h.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_xcvr_dfe_cal_sweep_h.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/sv_xcvr_dfe_cal_sweep_h.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig.sv SYSTEM_VERILOG PATH .//alt_xcvr_reconfig.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_sv.sv SYSTEM_VERILOG PATH .//alt_xcvr_reconfig_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cal_seq.sv SYSTEM_VERILOG PATH .//alt_xcvr_reconfig_cal_seq.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xreconf_cif.sv SYSTEM_VERILOG PATH .//alt_xreconf_cif.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xreconf_uif.sv SYSTEM_VERILOG PATH .//alt_xreconf_uif.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xreconf_basic_acq.sv SYSTEM_VERILOG PATH .//alt_xreconf_basic_acq.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_analog.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_analog/alt_xcvr_reconfig_analog.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_analog_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_analog/alt_xcvr_reconfig_analog_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xreconf_analog_datactrl.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_analog/alt_xreconf_analog_datactrl.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xreconf_analog_rmw.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_analog/alt_xreconf_analog_rmw.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xreconf_analog_ctrlsm.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_analog/alt_xreconf_analog_ctrlsm.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_offset_cancellation.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_offset_cancellation/alt_xcvr_reconfig_offset_cancellation.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_offset_cancellation_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_offset_cancellation/alt_xcvr_reconfig_offset_cancellation_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_eyemon.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_eyemon/alt_xcvr_reconfig_eyemon.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_eyemon_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_eyemon/alt_xcvr_reconfig_eyemon_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_eyemon_ctrl_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_eyemon/alt_xcvr_reconfig_eyemon_ctrl_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_eyemon_ber_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_eyemon/alt_xcvr_reconfig_eyemon_ber_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./ber_reader_dcfifo.v VERILOG PATH ../alt_xcvr_reconfig_eyemon/ber_reader_dcfifo.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./step_to_mon_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_eyemon/step_to_mon_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./mon_to_step_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_eyemon/mon_to_step_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe_reg_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe_reg_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe_cal_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe_cal_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe_cal_sweep_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe_cal_sweep_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe_cal_sweep_datapath_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe_cal_sweep_datapath_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe_oc_cal_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe_oc_cal_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe_pi_phase_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe_pi_phase_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe_step_to_mon_en_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe_step_to_mon_en_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe_adapt_tap_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe_adapt_tap_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe_ctrl_mux_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe_ctrl_mux_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe_local_reset_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe_local_reset_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe_cal_sim_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe_cal_sim_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe_adapt_tap_sim_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe_adapt_tap_sim_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_adce.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_adce/alt_xcvr_reconfig_adce.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_adce_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_adce/alt_xcvr_reconfig_adce_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_adce_datactrl_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_adce/alt_xcvr_reconfig_adce_datactrl_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dcd.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dcd/alt_xcvr_reconfig_dcd.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dcd_sv.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dcd/alt_xcvr_reconfig_dcd_sv.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dcd_cal.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dcd/alt_xcvr_reconfig_dcd_cal.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dcd_control.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dcd/alt_xcvr_reconfig_dcd_control.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dcd_datapath.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dcd/alt_xcvr_reconfig_dcd_datapath.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dcd_pll_reset.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dcd/alt_xcvr_reconfig_dcd_pll_reset.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dcd_eye_width.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dcd/alt_xcvr_reconfig_dcd_eye_width.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dcd_align_clk.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dcd/alt_xcvr_reconfig_dcd_align_clk.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dcd_get_sum.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dcd/alt_xcvr_reconfig_dcd_get_sum.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dcd_cal_sim_model.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dcd/alt_xcvr_reconfig_dcd_cal_sim_model.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_mif.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_mif/alt_xcvr_reconfig_mif.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_xcvr_reconfig_mif.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_mif/sv_xcvr_reconfig_mif.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_xcvr_reconfig_mif_ctrl.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_mif/sv_xcvr_reconfig_mif_ctrl.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_xcvr_reconfig_mif_avmm.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_mif/sv_xcvr_reconfig_mif_avmm.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_pll.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_pll/alt_xcvr_reconfig_pll.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_xcvr_reconfig_pll.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_pll/sv_xcvr_reconfig_pll.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_xcvr_reconfig_pll_ctrl.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_pll/sv_xcvr_reconfig_pll_ctrl.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_soc.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_soc/alt_xcvr_reconfig_soc.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_ram.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_soc/alt_xcvr_reconfig_cpu_ram.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_ram.hex OTHER PATH ../alt_xcvr_reconfig_soc/software/alt_xcvr_reconfig/mem_init/alt_xcvr_reconfig_cpu_ram.hex
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_direct.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_direct/alt_xcvr_reconfig_direct.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_xrbasic_l2p_addr.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/sv_xrbasic_l2p_addr.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_xrbasic_l2p_ch.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/sv_xrbasic_l2p_ch.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_xrbasic_l2p_rom.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/sv_xrbasic_l2p_rom.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_xrbasic_lif_csr.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/sv_xrbasic_lif_csr.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_xrbasic_lif.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/sv_xrbasic_lif.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_xcvr_reconfig_basic.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/sv_xcvr_reconfig_basic.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_arbiter_acq.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/alt_arbiter_acq.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_basic.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/alt_xcvr_reconfig_basic.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig.sdc OTHER PATH .//alt_xcvr_reconfig.sdc
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_arbiter.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_arbiter.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_m2s.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_m2s.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_wait_generate.v VERILOG PATH ../../altera_xcvr_generic/ctrl/altera_wait_generate.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_csr_selector.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_selector.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_reconfig_bundle_to_basic.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_reconfig_bundle_to_basic.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu.v VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/alt_xcvr_reconfig_cpu.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_b.mif OTHER PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_b.mif
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_reconfig_cpu.v VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_reconfig_cpu.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_a.mif OTHER PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_a.mif
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_reconfig_cpu_test_bench.v VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_reconfig_cpu_test_bench.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0.v VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_irq_mapper.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_irq_mapper.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_reset_controller.v VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_reset_controller.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_reset_synchronizer.v VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_reset_synchronizer.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_reset_controller.sdc OTHER PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_reset_controller.sdc
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_merlin_master_translator.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_merlin_master_translator.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_merlin_slave_translator.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_merlin_slave_translator.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_merlin_master_agent.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_merlin_master_agent.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_merlin_slave_agent.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_merlin_slave_agent.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_merlin_burst_uncompressor.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_merlin_burst_uncompressor.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_avalon_sc_fifo.v VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_avalon_sc_fifo.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_router.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_router.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_router_001.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_router_001.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_router_002.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_router_002.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_router_003.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_router_003.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_demux.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_demux.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_demux_001.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_demux_001.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_mux.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_mux.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_merlin_arbitrator.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_merlin_arbitrator.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_mux_001.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_mux_001.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_rsp_mux.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_rsp_mux.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_rsp_mux_001.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_rsp_mux_001.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_avalon_st_adapter.v VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_avalon_st_adapter.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv SYSTEM_VERILOG PATH ../../../../../../../../../../tmp/alt7608_1058057697702536445.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+Info: alt_xcvr_reconfig_0: "pcie_hip_avmm" instantiated alt_xcvr_reconfig "alt_xcvr_reconfig_0"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_xcvr_functions.sv
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/sv_xcvr_h.sv
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/alt_xcvr_resync.sv
+Warning: Overwriting different file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/plain_files.txt
+Info: avl_to_asmi_0: "pcie_hip_avmm" instantiated avl_to_asmi "avl_to_asmi_0"
+Info: Inserting clock-crossing logic between cmd_demux_001.src0 and cmd_mux.sink1
+Info: Inserting clock-crossing logic between rsp_demux.src1 and rsp_mux_001.sink0
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between cmd_demux.src1 and cmd_mux_001.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux.sink1
+Info: mem_if_ddr3_emif_0: "pcie_hip_avmm" instantiated altera_mem_if_ddr3_emif "mem_if_ddr3_emif_0"
+Info: pcie_reconfig_driver_0: "pcie_hip_avmm" instantiated altera_pcie_reconfig_driver "pcie_reconfig_driver_0"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/alt_xcvr_reconfig_h.sv
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "pcie_hip_avmm" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_1: "pcie_hip_avmm" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_2: "pcie_hip_avmm" instantiated altera_mm_interconnect "mm_interconnect_2"
+Info: irq_mapper: "pcie_hip_avmm" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "pcie_hip_avmm" instantiated altera_reset_controller "rst_controller"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_reset_controller.v
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_reset_synchronizer.v
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_reset_controller.sdc
+Info: pll0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_pll "pll0"
+Info: p0: Generating clock pair generator
+Info: p0: Generating pcie_hip_avmm_mem_if_ddr3_emif_0_p0_altdqdqs
+Info: p0: 
+Info: p0: *****************************
+Info: p0: 
+Info: p0: Remember to run the pcie_hip_avmm_mem_if_ddr3_emif_0_p0_pin_assignments.tcl
+Info: p0: script after running Synthesis and before Fitting.
+Info: p0: 
+Info: p0: *****************************
+Info: p0: 
+Info: p0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_phy_core "p0"
+Info: m0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_afi_mux "m0"
+Info: s0: Generating Qsys sequencer system
+Info: s0: QSYS sequencer system generated successfully
+Info: s0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_qseq "s0"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_master_agent.sv
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_slave_agent.sv
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: dmaster: "mem_if_ddr3_emif_0" instantiated altera_jtag_avalon_master "dmaster"
+Info: c0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_nextgen_ddr3_controller "c0"
+Info: oct0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_oct "oct0"
+Info: dll0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_dll "dll0"
+Info: csr_bridge: "mem_if_ddr3_emif_0" instantiated altera_mem_if_simple_avalon_mm_bridge "csr_bridge"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "mem_if_ddr3_emif_0" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_1: "mem_if_ddr3_emif_0" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: DUT_Rxm_BAR0_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "DUT_Rxm_BAR0_translator"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_master_translator.sv
+Info: DUT_Cra_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "DUT_Cra_translator"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_slave_translator.sv
+Info: DUT_Rxm_BAR0_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "DUT_Rxm_BAR0_agent"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_master_agent.sv
+Info: DUT_Cra_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "DUT_Cra_agent"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_slave_agent.sv
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: DUT_Cra_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "DUT_Cra_agent_rsp_fifo"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: DUT_Rxm_BAR0_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "DUT_Rxm_BAR0_limiter"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_traffic_limiter.sv
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_reorder_memory.sv
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: DUT_Cra_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "DUT_Cra_burst_adapter"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: DUT_Cra_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "DUT_Cra_rsp_width_adapter"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_1" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: jtag_phy_embedded_in_jtag_master: "dmaster" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_avalon_st_clock_crosser.v
+Warning: Overwriting different file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_std_synchronizer_nocut.v
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+Info: timing_adt: "dmaster" instantiated timing_adapter "timing_adt"
+Info: b2p: "dmaster" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "dmaster" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "dmaster" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "dmaster" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "dmaster" instantiated channel_adapter "p2b_adapter"
+Info: ng0: "c0" instantiated altera_mem_if_nextgen_ddr3_controller_core "ng0"
+Info: a0: "c0" instantiated alt_mem_ddrx_mm_st_converter "a0"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/grads/t/teko/new_playground/dfc-emc/emc_report/PCIe_Mem/IPCORE/pcie_hip_avmm/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: pcie_hip_avmm: Done "pcie_hip_avmm" with 71 modules, 418 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

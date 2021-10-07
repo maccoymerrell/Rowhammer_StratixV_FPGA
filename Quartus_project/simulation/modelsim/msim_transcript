@@ -1,0 +1,1155 @@
+# do PCIe_Mem_run_msim_rtl_verilog.do
+# if ![file isdirectory verilog_libs] {
+# 	file mkdir verilog_libs
+# }
+# 
+# vlib verilog_libs/altera_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_ver".
+# vmap altera_ver ./verilog_libs/altera_ver
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap altera_ver ./verilog_libs/altera_ver 
+# Copying /home/grads/m/maccoy.merrell/altera_std/16.0/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_ver {/home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_primitives.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:09:25 on Sep 28,2021
+# vlog -reportprogress 300 -vlog01compat -work altera_ver /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_primitives.v 
+# -- Compiling module global
+# -- Compiling module carry
+# -- Compiling module cascade
+# -- Compiling module carry_sum
+# -- Compiling module exp
+# -- Compiling module soft
+# -- Compiling module opndrn
+# -- Compiling module row_global
+# -- Compiling module TRI
+# -- Compiling module lut_input
+# -- Compiling module lut_output
+# -- Compiling module latch
+# -- Compiling module dlatch
+# -- Compiling module prim_gdff
+# -- Compiling module dff
+# -- Compiling module dffe
+# -- Compiling module dffea
+# -- Compiling module dffeas
+# -- Compiling module prim_gtff
+# -- Compiling module tff
+# -- Compiling module tffe
+# -- Compiling module prim_gjkff
+# -- Compiling module jkff
+# -- Compiling module jkffe
+# -- Compiling module prim_gsrff
+# -- Compiling module srff
+# -- Compiling module srffe
+# -- Compiling module clklock
+# -- Compiling module alt_inbuf
+# -- Compiling module alt_outbuf
+# -- Compiling module alt_outbuf_tri
+# -- Compiling module alt_iobuf
+# -- Compiling module alt_inbuf_diff
+# -- Compiling module alt_outbuf_diff
+# -- Compiling module alt_outbuf_tri_diff
+# -- Compiling module alt_iobuf_diff
+# -- Compiling module alt_bidir_diff
+# -- Compiling module alt_bidir_buf
+# -- Compiling UDP PRIM_GDFF_LOW
+# -- Compiling UDP PRIM_GDFF_LOW_SCLR_PRIORITY
+# -- Compiling UDP PRIM_GDFF_HIGH
+# -- Compiling UDP PRIM_GDFF_HIGH_SCLR_PRIORITY
+# 
+# Top level modules:
+# 	global
+# 	carry
+# 	cascade
+# 	carry_sum
+# 	exp
+# 	soft
+# 	opndrn
+# 	row_global
+# 	TRI
+# 	lut_input
+# 	lut_output
+# 	latch
+# 	dlatch
+# 	dff
+# 	dffe
+# 	dffea
+# 	dffeas
+# 	tff
+# 	tffe
+# 	jkff
+# 	jkffe
+# 	srff
+# 	srffe
+# 	clklock
+# 	alt_inbuf
+# 	alt_outbuf
+# 	alt_outbuf_tri
+# 	alt_iobuf
+# 	alt_inbuf_diff
+# 	alt_outbuf_diff
+# 	alt_outbuf_tri_diff
+# 	alt_iobuf_diff
+# 	alt_bidir_diff
+# 	alt_bidir_buf
+# End time: 17:09:26 on Sep 28,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/lpm_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/lpm_ver".
+# vmap lpm_ver ./verilog_libs/lpm_ver
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap lpm_ver ./verilog_libs/lpm_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work lpm_ver {/home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/220model.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:09:28 on Sep 28,2021
+# vlog -reportprogress 300 -vlog01compat -work lpm_ver /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/220model.v 
+# -- Compiling module LPM_MEMORY_INITIALIZATION
+# -- Compiling module LPM_HINT_EVALUATION
+# -- Compiling module LPM_DEVICE_FAMILIES
+# -- Compiling module lpm_constant
+# -- Compiling module lpm_inv
+# -- Compiling module lpm_and
+# -- Compiling module lpm_or
+# -- Compiling module lpm_xor
+# -- Compiling module lpm_bustri
+# -- Compiling module lpm_mux
+# -- Compiling module lpm_decode
+# -- Compiling module lpm_clshift
+# -- Compiling module lpm_add_sub
+# -- Compiling module lpm_compare
+# -- Compiling module lpm_mult
+# -- Compiling module lpm_divide
+# -- Compiling module lpm_abs
+# -- Compiling module lpm_counter
+# -- Compiling module lpm_latch
+# -- Compiling module lpm_ff
+# -- Compiling module lpm_shiftreg
+# -- Compiling module lpm_ram_dq
+# -- Compiling module lpm_ram_dp
+# -- Compiling module lpm_ram_io
+# -- Compiling module lpm_rom
+# -- Compiling module lpm_fifo
+# -- Compiling module lpm_fifo_dc_dffpipe
+# -- Compiling module lpm_fifo_dc_fefifo
+# -- Compiling module lpm_fifo_dc_async
+# -- Compiling module lpm_fifo_dc
+# -- Compiling module lpm_inpad
+# -- Compiling module lpm_outpad
+# -- Compiling module lpm_bipad
+# 
+# Top level modules:
+# 	lpm_constant
+# 	lpm_inv
+# 	lpm_and
+# 	lpm_or
+# 	lpm_xor
+# 	lpm_bustri
+# 	lpm_mux
+# 	lpm_decode
+# 	lpm_clshift
+# 	lpm_add_sub
+# 	lpm_compare
+# 	lpm_mult
+# 	lpm_divide
+# 	lpm_abs
+# 	lpm_counter
+# 	lpm_latch
+# 	lpm_ff
+# 	lpm_shiftreg
+# 	lpm_ram_dq
+# 	lpm_ram_dp
+# 	lpm_ram_io
+# 	lpm_rom
+# 	lpm_fifo
+# 	lpm_fifo_dc
+# 	lpm_inpad
+# 	lpm_outpad
+# 	lpm_bipad
+# End time: 17:09:28 on Sep 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/sgate_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/sgate_ver".
+# vmap sgate_ver ./verilog_libs/sgate_ver
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap sgate_ver ./verilog_libs/sgate_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work sgate_ver {/home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/sgate.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:09:31 on Sep 28,2021
+# vlog -reportprogress 300 -vlog01compat -work sgate_ver /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/sgate.v 
+# -- Compiling module oper_add
+# -- Compiling module oper_addsub
+# -- Compiling module mux21
+# -- Compiling module io_buf_tri
+# -- Compiling module io_buf_opdrn
+# -- Compiling module oper_mult
+# -- Compiling module tri_bus
+# -- Compiling module oper_div
+# -- Compiling module oper_mod
+# -- Compiling module oper_left_shift
+# -- Compiling module oper_right_shift
+# -- Compiling module oper_rotate_left
+# -- Compiling module oper_rotate_right
+# -- Compiling module oper_less_than
+# -- Compiling module oper_mux
+# -- Compiling module oper_selector
+# -- Compiling module oper_decoder
+# -- Compiling module oper_bus_mux
+# -- Compiling module oper_latch
+# 
+# Top level modules:
+# 	oper_add
+# 	oper_addsub
+# 	mux21
+# 	io_buf_tri
+# 	io_buf_opdrn
+# 	oper_mult
+# 	tri_bus
+# 	oper_div
+# 	oper_mod
+# 	oper_left_shift
+# 	oper_right_shift
+# 	oper_rotate_left
+# 	oper_rotate_right
+# 	oper_less_than
+# 	oper_mux
+# 	oper_selector
+# 	oper_decoder
+# 	oper_bus_mux
+# 	oper_latch
+# End time: 17:09:31 on Sep 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/altera_mf_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_mf_ver".
+# vmap altera_mf_ver ./verilog_libs/altera_mf_ver
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap altera_mf_ver ./verilog_libs/altera_mf_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_mf_ver {/home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_mf.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:09:32 on Sep 28,2021
+# vlog -reportprogress 300 -vlog01compat -work altera_mf_ver /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_mf.v 
+# -- Compiling module lcell
+# -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+# -- Compiling module ALTERA_MF_HINT_EVALUATION
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module dffp
+# -- Compiling module pll_iobuf
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module MF_stratix_pll
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Compiling module altpll
+# -- Compiling module altlvds_rx
+# -- Compiling module stratix_lvds_rx
+# -- Compiling module stratixgx_dpa_lvds_rx
+# -- Compiling module stratixii_lvds_rx
+# -- Compiling module flexible_lvds_rx
+# -- Compiling module stratixiii_lvds_rx
+# -- Compiling module stratixiii_lvds_rx_channel
+# -- Compiling module stratixiii_lvds_rx_dpa
+# -- Compiling module altlvds_tx
+# -- Compiling module stratixv_local_clk_divider
+# -- Compiling module stratix_tx_outclk
+# -- Compiling module stratixii_tx_outclk
+# -- Compiling module flexible_lvds_tx
+# -- Compiling module dcfifo_dffpipe
+# -- Compiling module dcfifo_fefifo
+# -- Compiling module dcfifo_async
+# -- Compiling module dcfifo_sync
+# -- Compiling module dcfifo_low_latency
+# -- Compiling module dcfifo_mixed_widths
+# -- Compiling module dcfifo
+# -- Compiling module altera_syncram_derived
+# -- Compiling module altera_syncram_derived_forwarding_logic
+# -- Compiling module altaccumulate
+# -- Compiling module altmult_accum
+# -- Compiling module altmult_add
+# -- Compiling module altfp_mult
+# -- Compiling module altsqrt
+# -- Compiling module altclklock
+# -- Compiling module altddio_in
+# -- Compiling module altddio_out
+# -- Compiling module altddio_bidir
+# -- Compiling module altdpram
+# -- Compiling module altsyncram
+# -- Compiling module altsyncram_body
+# -- Compiling module alt3pram
+# -- Compiling module parallel_add
+# -- Compiling module scfifo
+# -- Compiling module altshift_taps
+# -- Compiling module a_graycounter
+# -- Compiling module altsquare
+# -- Compiling module altera_std_synchronizer
+# -- Compiling module altera_std_synchronizer_bundle
+# -- Compiling module alt_cal
+# -- Compiling module alt_cal_mm
+# -- Compiling module alt_cal_c3gxb
+# -- Compiling module alt_cal_sv
+# -- Compiling module alt_cal_av
+# -- Compiling module alt_aeq_s4
+# -- Compiling module alt_eyemon
+# -- Compiling module alt_dfe
+# -- Compiling module signal_gen
+# -- Compiling module jtag_tap_controller
+# -- Compiling module dummy_hub
+# -- Compiling module sld_virtual_jtag
+# -- Compiling module sld_signaltap
+# -- Compiling module altstratixii_oct
+# -- Compiling module altparallel_flash_loader
+# -- Compiling module altserial_flash_loader
+# -- Compiling module alt_fault_injection
+# -- Compiling module sld_virtual_jtag_basic
+# -- Compiling module altsource_probe
+# 
+# Top level modules:
+# 	lcell
+# 	altpll
+# 	altlvds_rx
+# 	altlvds_tx
+# 	dcfifo
+# 	altaccumulate
+# 	altmult_accum
+# 	altmult_add
+# 	altfp_mult
+# 	altsqrt
+# 	altclklock
+# 	altddio_bidir
+# 	altdpram
+# 	alt3pram
+# 	parallel_add
+# 	scfifo
+# 	altshift_taps
+# 	a_graycounter
+# 	altsquare
+# 	altera_std_synchronizer_bundle
+# 	alt_cal
+# 	alt_cal_mm
+# 	alt_cal_c3gxb
+# 	alt_cal_sv
+# 	alt_cal_av
+# 	alt_aeq_s4
+# 	alt_eyemon
+# 	alt_dfe
+# 	sld_virtual_jtag
+# 	sld_signaltap
+# 	altstratixii_oct
+# 	altparallel_flash_loader
+# 	altserial_flash_loader
+# 	alt_fault_injection
+# 	sld_virtual_jtag_basic
+# 	altsource_probe
+# End time: 17:09:33 on Sep 28,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/altera_lnsim_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_lnsim_ver".
+# vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver 
+# Modifying modelsim.ini
+# vlog -sv -work altera_lnsim_ver {/home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:09:37 on Sep 28,2021
+# vlog -reportprogress 300 -sv -work altera_lnsim_ver /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv 
+# -- Compiling package altera_lnsim_functions
+# -- Compiling package altera_generic_pll_functions
+# -- Compiling module generic_pll
+# -- Importing package altera_lnsim_functions
+# -- Importing package altera_generic_pll_functions
+# -- Compiling module generic_cdr
+# -- Compiling module common_28nm_ram_pulse_generator
+# -- Compiling module common_28nm_ram_register
+# -- Compiling module common_28nm_ram_block
+# -- Compiling module generic_m20k
+# -- Compiling module generic_m10k
+# -- Compiling module common_28nm_mlab_cell_pulse_generator
+# -- Compiling module common_28nm_mlab_latch
+# -- Compiling module common_28nm_mlab_cell_core
+# -- Compiling module common_porta_latches
+# -- Compiling module generic_28nm_hp_mlab_cell_impl
+# -- Compiling module common_porta_registers
+# -- Compiling module generic_28nm_lc_mlab_cell_impl
+# -- Compiling module common_28nm_lutram_register
+# -- Compiling module generic_14nm_mlab_cell_impl
+# -- Compiling module common_14nm_lutram_register
+# -- Compiling module generic_mux
+# -- Compiling module generic_device_pll
+# -- Compiling module altera_mult_add
+# -- Compiling module altera_mult_add_rtl
+# -- Compiling module ama_signed_extension_function
+# -- Compiling module ama_dynamic_signed_function
+# -- Compiling module ama_register_function
+# -- Compiling module ama_register_with_ext_function
+# -- Compiling module ama_data_split_reg_ext_function
+# -- Compiling module ama_coef_reg_ext_function
+# -- Compiling module ama_adder_function
+# -- Compiling module ama_multiplier_function
+# -- Compiling module ama_preadder_function
+# -- Compiling module ama_chainout_adder_accumulator_function
+# -- Compiling module ama_systolic_adder_function
+# -- Compiling module ama_scanchain
+# -- Compiling module ama_latency_function
+# -- Compiling module altera_pll_reconfig_tasks
+# -- Compiling module altera_syncram
+# -- Compiling module altera_syncram_forwarding_logic
+# -- Compiling module ALTERA_LNSIM_MEMORY_INITIALIZATION
+# -- Compiling module altera_stratixv_pll
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20146): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20153): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20163): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20173): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20245): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20317): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20660): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20667): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20691): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20698): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20732): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20736): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20751): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20786): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20798): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20802): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20806): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20810): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20815): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20816): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20817): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20859): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20860): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20861): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20902): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20903): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20904): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20911): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20912): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20913): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20919): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20920): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20921): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20927): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20928): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20929): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20932): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20933): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20935): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20936): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20937): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20943): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20944): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20945): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20951): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20952): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20953): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20959): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20960): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20961): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20967): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20968): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20969): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20975): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20976): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20977): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20983): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20984): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20985): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20991): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20992): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20993): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(20999): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21000): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21001): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21007): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21008): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21009): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21015): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21016): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21017): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21029): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21030): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21031): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21037): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21038): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21039): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21045): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21046): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21047): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21054): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21055): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21056): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21063): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21064): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21065): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21071): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21072): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21073): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21079): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21080): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21081): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21087): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21088): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21089): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21095): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21096): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21097): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21104): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21105): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21106): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21118): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21119): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21120): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21127): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21128): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21129): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21136): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21137): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21138): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21145): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21146): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21147): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21154): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21155): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21156): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21216): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21217): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21218): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21257): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21258): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21259): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21298): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21299): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21300): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21339): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21340): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21341): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21380): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21381): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21382): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21421): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21422): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21423): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21464): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21465): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21466): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21506): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21507): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21508): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21528): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21529): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21530): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21536): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21537): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21538): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21545): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21546): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21547): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21553): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21554): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21555): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21567): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21568): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21569): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21581): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21582): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21583): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21596): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21597): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21609): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21610): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(21611): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22086): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22090): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22103): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22131): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22142): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22149): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22152): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22158): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22161): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22173): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22174): Carriage return (0x0D) is not followed by a newline (0x0A).
+# -- Compiling module altera_arriav_pll
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22184): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22191): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22201): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22211): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22283): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22355): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22698): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22705): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22729): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22736): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22770): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22774): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22789): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22824): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22836): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22840): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22844): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22848): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22853): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22854): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22855): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22897): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22898): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22899): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22940): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22941): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22942): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22949): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22950): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22951): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22957): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22958): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22959): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22965): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22966): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22967): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22970): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22971): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22973): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22974): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22975): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22981): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22982): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22983): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22989): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22990): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22991): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22997): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22998): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(22999): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23005): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23006): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23007): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23013): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23014): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23015): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23021): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23022): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23023): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23029): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23030): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23031): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23037): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23038): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23039): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23045): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23046): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23047): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23053): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23054): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23055): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23067): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23068): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23069): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23075): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23076): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23077): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23083): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23084): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23085): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23092): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23093): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23094): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23101): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23102): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23103): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23109): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23110): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23111): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23117): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23118): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23119): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23125): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23126): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23127): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23133): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23134): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23135): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23142): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23143): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23144): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23156): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23157): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23158): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23165): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23166): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23167): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23174): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23175): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23176): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23183): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23184): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23185): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23192): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23193): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23194): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23254): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23255): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23256): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23295): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23296): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23297): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23336): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23337): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23338): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23377): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23378): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23379): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23418): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23419): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23420): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23459): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23460): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23461): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23502): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23503): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23504): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23544): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23545): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23546): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23566): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23567): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23568): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23574): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23575): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23576): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23583): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23584): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23585): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23591): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23592): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23593): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23605): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23606): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23607): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23619): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23620): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23621): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23634): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23635): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23647): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23648): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(23649): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24121): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24125): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24138): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24166): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24177): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24184): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24187): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24193): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24196): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24208): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24209): Carriage return (0x0D) is not followed by a newline (0x0A).
+# -- Compiling module altera_arriavgz_pll
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24219): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24226): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24236): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24246): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24318): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24390): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24733): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24740): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24764): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24771): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24805): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24809): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24824): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24859): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24871): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24875): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24879): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24883): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24888): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24889): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24890): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24932): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24933): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24934): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24975): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24976): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24977): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24984): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24985): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24986): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24992): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24993): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(24994): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25000): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25001): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25002): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25005): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25006): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25008): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25009): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25010): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25016): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25017): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25018): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25024): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25025): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25026): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25032): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25033): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25034): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25040): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25041): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25042): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25048): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25049): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25050): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25056): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25057): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25058): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25064): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25065): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25066): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25072): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25073): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25074): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25080): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25081): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25082): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25088): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25089): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25090): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25102): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25103): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25104): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25110): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25111): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25112): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25118): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25119): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25120): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25127): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25128): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25129): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25136): Carriage return (0x0D) is not followed by a newline (0x0A).
+quit
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25137): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25138): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25144): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25145): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25146): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25152): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25153): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25154): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25160): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25161): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25162): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25168): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25169): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25170): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25177): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25178): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25179): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25191): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25192): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25193): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25200): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25201): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25202): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25209): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25210): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25211): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25218): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25219): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25220): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25227): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25228): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25229): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25289): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25290): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25291): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25330): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25331): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25332): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25371): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25372): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25373): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25412): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25413): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25414): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25453): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25454): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25455): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25494): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25495): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25496): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25537): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25538): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25539): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25579): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25580): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25581): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25601): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25602): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25603): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25609): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25610): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25611): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25618): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25619): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25620): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25626): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25627): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25628): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25640): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25641): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25642): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25654): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25655): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25656): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25669): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25670): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25682): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25683): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(25684): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26156): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26160): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26173): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26201): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26212): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26219): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26222): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26228): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26231): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26243): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26244): Carriage return (0x0D) is not followed by a newline (0x0A).
+# -- Compiling module altera_cyclonev_pll
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26254): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26261): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26271): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26281): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26353): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26526): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26531): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26546): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26550): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26569): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26572): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26587): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26616): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26628): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26632): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26636): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26640): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26645): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26646): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26647): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26689): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26690): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26691): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26732): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26733): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26734): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26741): Carriage return (0x0D) is not followed by a newline (0x0A).
+quit
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26742): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26743): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26749): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26750): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26751): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26757): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26758): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26759): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26762): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26763): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26765): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26766): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26767): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26772): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26773): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26774): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26779): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26780): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26781): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26786): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26787): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26788): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26793): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26794): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26795): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26800): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26801): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26802): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26807): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26808): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26809): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26814): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26815): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26816): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26821): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26822): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26823): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26828): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26829): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26830): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26835): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26836): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26837): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26846): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26847): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26848): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26853): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26854): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26855): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26860): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26861): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26862): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26867): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26868): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26869): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26874): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26875): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26876): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26881): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26882): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26883): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26888): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26889): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26890): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26895): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26896): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26897): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26902): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26903): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26904): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26909): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26910): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26911): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26920): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26921): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26922): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26927): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26928): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26929): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26934): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26935): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26936): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26941): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26942): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26943): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26948): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26949): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26950): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26982): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26983): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(26984): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27005): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27006): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27007): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27028): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27029): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27030): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27051): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27052): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27053): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27074): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27075): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27076): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27097): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27098): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27099): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27121): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27122): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27123): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27153): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27154): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27155): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27170): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27171): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27172): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27177): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27178): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27179): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27184): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27185): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27186): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27191): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27192): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27193): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27202): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27203): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27204): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27213): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27214): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27215): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27225): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27226): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27236): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27237): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27238): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27544): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27547): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27561): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27584): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27595): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27602): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27605): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27611): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27614): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/grads/m/maccoy.merrell/altera_std/16.0/quartus/eda/sim_lib/altera_lnsim.sv(27626): Carriage return (0x0D) is not followed by a newline (0x0A).
+# -- Compiling module altera_pll
+# -- Compiling module dps_extra_kick
+# -- Compiling module dprio_init
+# -- Compiling module dps_pulse_gen
+# -- Compiling module altera_iopll
+# -- Compiling module dps_pulse_gen_iopll
+# -- Compiling module twentynm_iopll_arlol
+# -- Compiling module fourteennm_altera_iopll
+# -- Compiling module dps_pulse_gen_fourteennm_iopll
+# -- Compiling package fourteennm_iopll_functions
+# -- Compiling module fourteennm_simple_iopll
+# -- Importing package fourteennm_iopll_functions
+# -- Compiling module fourteennm_sub_iopll
+# -- Compiling module twentynm_iopll_ip
+# -- Compiling module altera_iopll_rotation_lcells
+# -- Compiling module altera_pll_dps_lcell_comb
+# -- Compiling module iopll_bootstrap
+# 
+# Top level modules:
+# 	generic_cdr
+# 	generic_m20k
+# 	generic_m10k
+# 	common_porta_latches
+# 	generic_28nm_hp_mlab_cell_impl
+# 	generic_28nm_lc_mlab_cell_impl
+# 	generic_14nm_mlab_cell_impl
+# 	generic_mux
+# 	generic_device_pll
+# 	altera_mult_add
+# 	altera_pll_reconfig_tasks
+# 	altera_syncram
+# 	altera_pll
+# 	altera_iopll
+# 	fourteennm_altera_iopll
+# 	fourteennm_simple_iopll
+# End time: 17:09:50 on Sep 28,2021, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 694

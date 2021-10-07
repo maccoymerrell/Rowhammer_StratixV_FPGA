@@ -1,0 +1,345 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 272 608)
+	(text "PCIe_Mem" (rect 5 0 52 12)(font "Arial" ))
+	(text "inst" (rect 8 576 20 588)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk_100" (rect 0 0 29 12)(font "Arial" ))
+		(text "clk_100" (rect 21 27 50 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "pcie_perst" (rect 0 0 41 12)(font "Arial" ))
+		(text "pcie_perst" (rect 21 43 62 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "pcie1_refclk" (rect 0 0 47 12)(font "Arial" ))
+		(text "pcie1_refclk" (rect 21 59 68 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "serial_pcie1_rx_in0" (rect 0 0 75 12)(font "Arial" ))
+		(text "serial_pcie1_rx_in0" (rect 21 75 96 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "serial_pcie1_rx_in1" (rect 0 0 74 12)(font "Arial" ))
+		(text "serial_pcie1_rx_in1" (rect 21 91 95 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "serial_pcie1_rx_in2" (rect 0 0 75 12)(font "Arial" ))
+		(text "serial_pcie1_rx_in2" (rect 21 107 96 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "serial_pcie1_rx_in3" (rect 0 0 75 12)(font "Arial" ))
+		(text "serial_pcie1_rx_in3" (rect 21 123 96 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "oct2_rzqin" (rect 0 0 40 12)(font "Arial" ))
+		(text "oct2_rzqin" (rect 21 139 61 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "ddr2_clk" (rect 0 0 34 12)(font "Arial" ))
+		(text "ddr2_clk" (rect 21 155 55 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "oct4_rzqin" (rect 0 0 41 12)(font "Arial" ))
+		(text "oct4_rzqin" (rect 21 171 62 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "ddr4_clk" (rect 0 0 35 12)(font "Arial" ))
+		(text "ddr4_clk" (rect 21 187 56 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 1))
+	)
+	(port
+		(pt 256 32)
+		(output)
+		(text "serial_pcie1_tx_out0" (rect 0 0 80 12)(font "Arial" ))
+		(text "serial_pcie1_tx_out0" (rect 155 27 235 39)(font "Arial" ))
+		(line (pt 256 32)(pt 240 32)(line_width 1))
+	)
+	(port
+		(pt 256 48)
+		(output)
+		(text "serial_pcie1_tx_out1" (rect 0 0 79 12)(font "Arial" ))
+		(text "serial_pcie1_tx_out1" (rect 156 43 235 55)(font "Arial" ))
+		(line (pt 256 48)(pt 240 48)(line_width 1))
+	)
+	(port
+		(pt 256 64)
+		(output)
+		(text "serial_pcie1_tx_out2" (rect 0 0 80 12)(font "Arial" ))
+		(text "serial_pcie1_tx_out2" (rect 155 59 235 71)(font "Arial" ))
+		(line (pt 256 64)(pt 240 64)(line_width 1))
+	)
+	(port
+		(pt 256 80)
+		(output)
+		(text "serial_pcie1_tx_out3" (rect 0 0 80 12)(font "Arial" ))
+		(text "serial_pcie1_tx_out3" (rect 155 75 235 87)(font "Arial" ))
+		(line (pt 256 80)(pt 240 80)(line_width 1))
+	)
+	(port
+		(pt 256 96)
+		(output)
+		(text "mem2_a[15..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "mem2_a[15..0]" (rect 175 91 235 103)(font "Arial" ))
+		(line (pt 256 96)(pt 240 96)(line_width 3))
+	)
+	(port
+		(pt 256 112)
+		(output)
+		(text "mem2_ba[2..0]" (rect 0 0 61 12)(font "Arial" ))
+		(text "mem2_ba[2..0]" (rect 174 107 235 119)(font "Arial" ))
+		(line (pt 256 112)(pt 240 112)(line_width 3))
+	)
+	(port
+		(pt 256 128)
+		(output)
+		(text "mem2_ck[1..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "mem2_ck[1..0]" (rect 175 123 235 135)(font "Arial" ))
+		(line (pt 256 128)(pt 240 128)(line_width 3))
+	)
+	(port
+		(pt 256 144)
+		(output)
+		(text "mem2_ck_n[1..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "mem2_ck_n[1..0]" (rect 165 139 235 151)(font "Arial" ))
+		(line (pt 256 144)(pt 240 144)(line_width 3))
+	)
+	(port
+		(pt 256 160)
+		(output)
+		(text "mem2_cke[1..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "mem2_cke[1..0]" (rect 171 155 235 167)(font "Arial" ))
+		(line (pt 256 160)(pt 240 160)(line_width 3))
+	)
+	(port
+		(pt 256 176)
+		(output)
+		(text "mem2_cs_n[1..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "mem2_cs_n[1..0]" (rect 165 171 235 183)(font "Arial" ))
+		(line (pt 256 176)(pt 240 176)(line_width 3))
+	)
+	(port
+		(pt 256 192)
+		(output)
+		(text "mem2_dm[7..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "mem2_dm[7..0]" (rect 171 187 235 199)(font "Arial" ))
+		(line (pt 256 192)(pt 240 192)(line_width 3))
+	)
+	(port
+		(pt 256 208)
+		(output)
+		(text "mem2_ras_n[0..0]" (rect 0 0 75 12)(font "Arial" ))
+		(text "mem2_ras_n[0..0]" (rect 160 203 235 215)(font "Arial" ))
+		(line (pt 256 208)(pt 240 208)(line_width 3))
+	)
+	(port
+		(pt 256 224)
+		(output)
+		(text "mem2_cas_n[0..0]" (rect 0 0 76 12)(font "Arial" ))
+		(text "mem2_cas_n[0..0]" (rect 159 219 235 231)(font "Arial" ))
+		(line (pt 256 224)(pt 240 224)(line_width 3))
+	)
+	(port
+		(pt 256 240)
+		(output)
+		(text "mem2_we_n[0..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "mem2_we_n[0..0]" (rect 162 235 235 247)(font "Arial" ))
+		(line (pt 256 240)(pt 240 240)(line_width 3))
+	)
+	(port
+		(pt 256 256)
+		(output)
+		(text "mem2_reset_n" (rect 0 0 62 12)(font "Arial" ))
+		(text "mem2_reset_n" (rect 173 251 235 263)(font "Arial" ))
+		(line (pt 256 256)(pt 240 256)(line_width 1))
+	)
+	(port
+		(pt 256 320)
+		(output)
+		(text "mem2_odt[1..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "mem2_odt[1..0]" (rect 173 315 235 327)(font "Arial" ))
+		(line (pt 256 320)(pt 240 320)(line_width 3))
+	)
+	(port
+		(pt 256 336)
+		(output)
+		(text "mem4_a[15..0]" (rect 0 0 61 12)(font "Arial" ))
+		(text "mem4_a[15..0]" (rect 174 331 235 343)(font "Arial" ))
+		(line (pt 256 336)(pt 240 336)(line_width 3))
+	)
+	(port
+		(pt 256 352)
+		(output)
+		(text "mem4_ba[2..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "mem4_ba[2..0]" (rect 173 347 235 359)(font "Arial" ))
+		(line (pt 256 352)(pt 240 352)(line_width 3))
+	)
+	(port
+		(pt 256 368)
+		(output)
+		(text "mem4_ck[1..0]" (rect 0 0 61 12)(font "Arial" ))
+		(text "mem4_ck[1..0]" (rect 174 363 235 375)(font "Arial" ))
+		(line (pt 256 368)(pt 240 368)(line_width 3))
+	)
+	(port
+		(pt 256 384)
+		(output)
+		(text "mem4_ck_n[1..0]" (rect 0 0 71 12)(font "Arial" ))
+		(text "mem4_ck_n[1..0]" (rect 164 379 235 391)(font "Arial" ))
+		(line (pt 256 384)(pt 240 384)(line_width 3))
+	)
+	(port
+		(pt 256 400)
+		(output)
+		(text "mem4_cke[1..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "mem4_cke[1..0]" (rect 169 395 235 407)(font "Arial" ))
+		(line (pt 256 400)(pt 240 400)(line_width 3))
+	)
+	(port
+		(pt 256 416)
+		(output)
+		(text "mem4_cs_n[1..0]" (rect 0 0 71 12)(font "Arial" ))
+		(text "mem4_cs_n[1..0]" (rect 164 411 235 423)(font "Arial" ))
+		(line (pt 256 416)(pt 240 416)(line_width 3))
+	)
+	(port
+		(pt 256 432)
+		(output)
+		(text "mem4_dm[7..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "mem4_dm[7..0]" (rect 169 427 235 439)(font "Arial" ))
+		(line (pt 256 432)(pt 240 432)(line_width 3))
+	)
+	(port
+		(pt 256 448)
+		(output)
+		(text "mem4_ras_n[0..0]" (rect 0 0 76 12)(font "Arial" ))
+		(text "mem4_ras_n[0..0]" (rect 159 443 235 455)(font "Arial" ))
+		(line (pt 256 448)(pt 240 448)(line_width 3))
+	)
+	(port
+		(pt 256 464)
+		(output)
+		(text "mem4_cas_n[0..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "mem4_cas_n[0..0]" (rect 158 459 235 471)(font "Arial" ))
+		(line (pt 256 464)(pt 240 464)(line_width 3))
+	)
+	(port
+		(pt 256 480)
+		(output)
+		(text "mem4_we_n[0..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "mem4_we_n[0..0]" (rect 161 475 235 487)(font "Arial" ))
+		(line (pt 256 480)(pt 240 480)(line_width 3))
+	)
+	(port
+		(pt 256 496)
+		(output)
+		(text "mem4_reset_n" (rect 0 0 63 12)(font "Arial" ))
+		(text "mem4_reset_n" (rect 172 491 235 503)(font "Arial" ))
+		(line (pt 256 496)(pt 240 496)(line_width 1))
+	)
+	(port
+		(pt 256 560)
+		(output)
+		(text "mem4_odt[1..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "mem4_odt[1..0]" (rect 172 555 235 567)(font "Arial" ))
+		(line (pt 256 560)(pt 240 560)(line_width 3))
+	)
+	(port
+		(pt 256 272)
+		(bidir)
+		(text "mem2_dq[63..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "mem2_dq[63..0]" (rect 169 267 235 279)(font "Arial" ))
+		(line (pt 256 272)(pt 240 272)(line_width 3))
+	)
+	(port
+		(pt 256 288)
+		(bidir)
+		(text "mem2_dqs[7..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "mem2_dqs[7..0]" (rect 169 283 235 295)(font "Arial" ))
+		(line (pt 256 288)(pt 240 288)(line_width 3))
+	)
+	(port
+		(pt 256 304)
+		(bidir)
+		(text "mem2_dqs_n[7..0]" (rect 0 0 76 12)(font "Arial" ))
+		(text "mem2_dqs_n[7..0]" (rect 159 299 235 311)(font "Arial" ))
+		(line (pt 256 304)(pt 240 304)(line_width 3))
+	)
+	(port
+		(pt 256 512)
+		(bidir)
+		(text "mem4_dq[63..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "mem4_dq[63..0]" (rect 168 507 235 519)(font "Arial" ))
+		(line (pt 256 512)(pt 240 512)(line_width 3))
+	)
+	(port
+		(pt 256 528)
+		(bidir)
+		(text "mem4_dqs[7..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "mem4_dqs[7..0]" (rect 168 523 235 535)(font "Arial" ))
+		(line (pt 256 528)(pt 240 528)(line_width 3))
+	)
+	(port
+		(pt 256 544)
+		(bidir)
+		(text "mem4_dqs_n[7..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "mem4_dqs_n[7..0]" (rect 158 539 235 551)(font "Arial" ))
+		(line (pt 256 544)(pt 240 544)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 240 576)(line_width 1))
+	)
+)

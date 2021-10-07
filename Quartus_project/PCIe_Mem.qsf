@@ -1,0 +1,1677 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus II License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 14.1.0 Build 186 12/03/2014 SJ Full Version
+# Date created = 17:49:44  October 12, 2015
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		PCIe_Mem_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Stratix V"
+set_global_assignment -name DEVICE 5SGXEA3K3F40C4
+set_global_assignment -name TOP_LEVEL_ENTITY PCIe_Mem
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 14.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:49:44  OCTOBER 12, 2015"
+set_global_assignment -name LAST_QUARTUS_VERSION 16.0.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+##------------------------------ M4 DDR3 Pin map ------------------------------
+
+#set_location_assignment PIN_G31 -to mem4_a[0]
+#set_location_assignment PIN_K31 -to mem4_a[1]
+#set_location_assignment PIN_H31 -to mem4_a[2]
+#set_location_assignment PIN_D31 -to mem4_a[3]
+#set_location_assignment PIN_L30 -to mem4_a[4]
+#set_location_assignment PIN_E31 -to mem4_a[5]
+#set_location_assignment PIN_N31 -to mem4_a[6]
+#set_location_assignment PIN_F30 -to mem4_a[7]
+#set_location_assignment PIN_P31 -to mem4_a[8]
+#set_location_assignment PIN_J29 -to mem4_a[9]
+#set_location_assignment PIN_J30 -to mem4_a[10]
+#set_location_assignment PIN_L31 -to mem4_a[11]
+#set_location_assignment PIN_R30 -to mem4_a[12]
+##set_location_assignment PIN_J31 -to mem4_a[13]
+#set_location_assignment PIN_C31 -to mem4_ba[0]
+#set_location_assignment PIN_K30 -to mem4_ba[1]
+#set_location_assignment PIN_E30 -to mem4_ba[2]
+#set_location_assignment PIN_A29 -to mem4_dm[0]
+#set_location_assignment PIN_J28 -to mem4_dm[1]
+#set_location_assignment PIN_A26 -to mem4_dm[2]
+#set_location_assignment PIN_L27 -to mem4_dm[3]
+#set_location_assignment PIN_A25 -to mem4_dm[4]
+#set_location_assignment PIN_K25 -to mem4_dm[5]
+#set_location_assignment PIN_A22 -to mem4_dm[6]
+#set_location_assignment PIN_B20 -to mem4_dm[7]
+#set_location_assignment PIN_M21 -to mem4_dm[8]
+#set_location_assignment PIN_A28 -to mem4_dq[0]
+#set_location_assignment PIN_E28 -to mem4_dq[1]
+#set_location_assignment PIN_B29 -to mem4_dq[2]
+#set_location_assignment PIN_F29 -to mem4_dq[3]
+#set_location_assignment PIN_D28 -to mem4_dq[4]
+#set_location_assignment PIN_H28 -to mem4_dq[5]
+#set_location_assignment PIN_C28 -to mem4_dq[6]
+#set_location_assignment PIN_G28 -to mem4_dq[7]
+#set_location_assignment PIN_K28 -to mem4_dq[8]
+#set_location_assignment PIN_M29 -to mem4_dq[9]
+#set_location_assignment PIN_L28 -to mem4_dq[10]
+#set_location_assignment PIN_R29 -to mem4_dq[11]
+#set_location_assignment PIN_P29 -to mem4_dq[12]
+#set_location_assignment PIN_V29 -to mem4_dq[13]
+#set_location_assignment PIN_N28 -to mem4_dq[14]
+#set_location_assignment PIN_U29 -to mem4_dq[15]
+#set_location_assignment PIN_G26 -to mem4_dq[16]
+#set_location_assignment PIN_D27 -to mem4_dq[17]
+#set_location_assignment PIN_F26 -to mem4_dq[18]
+#set_location_assignment PIN_C27 -to mem4_dq[19]
+#set_location_assignment PIN_C26 -to mem4_dq[20]
+#set_location_assignment PIN_J26 -to mem4_dq[21]
+#set_location_assignment PIN_E27 -to mem4_dq[22]
+#set_location_assignment PIN_H26 -to mem4_dq[23]
+#set_location_assignment PIN_J27 -to mem4_dq[24]
+#set_location_assignment PIN_N27 -to mem4_dq[25]
+#set_location_assignment PIN_T27 -to mem4_dq[26]
+#set_location_assignment PIN_M27 -to mem4_dq[27]
+#set_location_assignment PIN_U26 -to mem4_dq[28]
+#set_location_assignment PIN_P28 -to mem4_dq[29]
+#set_location_assignment PIN_U27 -to mem4_dq[30]
+#set_location_assignment PIN_R27 -to mem4_dq[31]
+#set_location_assignment PIN_B25 -to mem4_dq[32]
+#set_location_assignment PIN_F24 -to mem4_dq[33]
+#set_location_assignment PIN_C25 -to mem4_dq[34]
+#set_location_assignment PIN_G24 -to mem4_dq[35]
+#set_location_assignment PIN_D24 -to mem4_dq[36]
+#set_location_assignment PIN_H25 -to mem4_dq[37]
+#set_location_assignment PIN_C24 -to mem4_dq[38]
+#set_location_assignment PIN_G25 -to mem4_dq[39]
+#set_location_assignment PIN_J25 -to mem4_dq[40]
+#set_location_assignment PIN_N26 -to mem4_dq[41]
+#set_location_assignment PIN_L26 -to mem4_dq[42]
+#set_location_assignment PIN_P26 -to mem4_dq[43]
+#set_location_assignment PIN_P25 -to mem4_dq[44]
+#set_location_assignment PIN_T25 -to mem4_dq[45]
+#set_location_assignment PIN_N25 -to mem4_dq[46]
+#set_location_assignment PIN_U25 -to mem4_dq[47]
+#set_location_assignment PIN_H22 -to mem4_dq[48]
+#set_location_assignment PIN_B23 -to mem4_dq[49]
+#set_location_assignment PIN_G22 -to mem4_dq[50]
+#set_location_assignment PIN_G23 -to mem4_dq[51]
+#set_location_assignment PIN_D22 -to mem4_dq[52]
+#set_location_assignment PIN_H23 -to mem4_dq[53]
+#set_location_assignment PIN_C22 -to mem4_dq[54]
+#set_location_assignment PIN_A23 -to mem4_dq[55]
+#set_location_assignment PIN_A20 -to mem4_dq[56]
+#set_location_assignment PIN_C20 -to mem4_dq[57]
+#set_location_assignment PIN_F20 -to mem4_dq[58]
+#set_location_assignment PIN_C21 -to mem4_dq[59]
+#set_location_assignment PIN_H20 -to mem4_dq[60]
+#set_location_assignment PIN_D21 -to mem4_dq[61]
+#set_location_assignment PIN_G20 -to mem4_dq[62]
+#set_location_assignment PIN_E20 -to mem4_dq[63]
+##set_location_assignment PIN_M20 -to mem4_dq[64]
+##set_location_assignment PIN_L20 -to mem4_dq[65]
+##set_location_assignment PIN_N22 -to mem4_dq[66]
+##set_location_assignment PIN_J21 -to mem4_dq[67]
+##set_location_assignment PIN_N21 -to mem4_dq[68]
+##set_location_assignment PIN_K21 -to mem4_dq[69]
+##set_location_assignment PIN_N20 -to mem4_dq[70]
+##set_location_assignment PIN_L21 -to mem4_dq[71]
+#set_location_assignment PIN_G29 -to mem4_dqs_n[0]
+#set_location_assignment PIN_T30 -to mem4_dqs_n[1]
+#set_location_assignment PIN_F27 -to mem4_dqs_n[2]
+#set_location_assignment PIN_T28 -to mem4_dqs_n[3]
+#set_location_assignment PIN_E25 -to mem4_dqs_n[4]
+#set_location_assignment PIN_R26 -to mem4_dqs_n[5]
+#set_location_assignment PIN_E23 -to mem4_dqs_n[6]
+#set_location_assignment PIN_F21 -to mem4_dqs_n[7]
+##set_location_assignment PIN_J22 -to mem4_dqs_n[8]
+#set_location_assignment PIN_H29 -to mem4_dqs[0]
+#set_location_assignment PIN_U30 -to mem4_dqs[1]
+#set_location_assignment PIN_G27 -to mem4_dqs[2]
+#set_location_assignment PIN_U28 -to mem4_dqs[3]
+#set_location_assignment PIN_E24 -to mem4_dqs[4]
+#set_location_assignment PIN_R25 -to mem4_dqs[5]
+#set_location_assignment PIN_F23 -to mem4_dqs[6]
+#set_location_assignment PIN_G21 -to mem4_dqs[7]
+#set_location_assignment PIN_K22 -to mem4_dqs[8]
+#set_location_assignment PIN_B28 -to mem4_cas_n[0]
+#set_location_assignment PIN_R31 -to mem4_cke[0]
+#set_location_assignment PIN_M30 -to mem4_ck_n[0]
+#set_location_assignment PIN_N30 -to mem4_ck[0]
+#set_location_assignment PIN_B31 -to mem4_cs_n[0]
+#set_location_assignment PIN_A31 -to mem4_odt[0]
+#set_location_assignment PIN_B26 -to mem4_ras_n[0]
+#set_location_assignment PIN_G30 -to mem4_reset_n
+#set_location_assignment PIN_C30 -to mem4_we_n[0]
+#set_location_assignment PIN_B34 -to oct4_rzqin
+#set_location_assignment PIN_J23 -to ddr4_clk
+#-------------------------M4 PINMAP ENDS
+
+##------------------------ M2 DDR3 ---------------------------------------
+set_location_assignment PIN_AN23 -to mem2_a[0]
+set_location_assignment PIN_AN25 -to mem2_a[1]
+set_location_assignment PIN_AU24 -to mem2_a[2]
+set_location_assignment PIN_AM25 -to mem2_a[3]
+set_location_assignment PIN_AR24 -to mem2_a[4]
+set_location_assignment PIN_AR25 -to mem2_a[5]
+set_location_assignment PIN_AL24 -to mem2_a[6]
+set_location_assignment PIN_AP24 -to mem2_a[7]
+set_location_assignment PIN_AL25 -to mem2_a[8]
+set_location_assignment PIN_AK24 -to mem2_a[9]
+set_location_assignment PIN_AT24 -to mem2_a[10]
+set_location_assignment PIN_AP25 -to mem2_a[11]
+set_location_assignment PIN_AM23 -to mem2_a[12]
+set_location_assignment PIN_AN24 -to mem2_a[13]
+set_location_assignment PIN_AM22 -to mem2_a[14]
+set_location_assignment PIN_AJ24 -to mem2_a[15]
+
+set_location_assignment PIN_AB25 -to mem2_ba[0]
+set_location_assignment PIN_AV26 -to mem2_ba[1]
+set_location_assignment PIN_AH24 -to mem2_ba[2]
+
+set_location_assignment PIN_AW25 -to mem2_cas_n[0]
+set_location_assignment PIN_AD24 -to mem2_ck[0]
+set_location_assignment PIN_AB24 -to mem2_ck[1]
+
+set_location_assignment PIN_AE24 -to mem2_ck_n[0]
+set_location_assignment PIN_AC24 -to mem2_ck_n[1]
+
+set_location_assignment PIN_AF25 -to mem2_cke[0]
+set_location_assignment PIN_AE25 -to mem2_cke[1]
+
+set_location_assignment PIN_AJ30 -to mem2_cs_n[0]
+set_location_assignment PIN_AV25 -to mem2_cs_n[1]
+
+set_location_assignment PIN_AB28 -to mem2_dm[0]
+set_location_assignment PIN_AH30 -to mem2_dm[1]
+set_location_assignment PIN_AP31 -to mem2_dm[2]
+set_location_assignment PIN_AA29 -to mem2_dm[3]
+set_location_assignment PIN_AN34 -to mem2_dm[4]
+set_location_assignment PIN_AW28 -to mem2_dm[5]
+set_location_assignment PIN_AN28 -to mem2_dm[6]
+set_location_assignment PIN_AH25 -to mem2_dm[7]
+
+set_location_assignment PIN_AD30 -to mem2_dq[0]
+set_location_assignment PIN_AE30 -to mem2_dq[1]
+set_location_assignment PIN_AG28 -to mem2_dq[2]
+set_location_assignment PIN_AH28 -to mem2_dq[3]
+set_location_assignment PIN_AB30 -to mem2_dq[4]
+set_location_assignment PIN_AC30 -to mem2_dq[5]
+set_location_assignment PIN_AE29 -to mem2_dq[6]
+set_location_assignment PIN_AF28 -to mem2_dq[7]
+set_location_assignment PIN_AE31 -to mem2_dq[8]
+set_location_assignment PIN_AF31 -to mem2_dq[9]
+set_location_assignment PIN_AK32 -to mem2_dq[10]
+set_location_assignment PIN_AL33 -to mem2_dq[11]
+set_location_assignment PIN_AJ32 -to mem2_dq[12]
+set_location_assignment PIN_AH33 -to mem2_dq[13]
+set_location_assignment PIN_AJ33 -to mem2_dq[14]
+set_location_assignment PIN_AK33 -to mem2_dq[15]
+set_location_assignment PIN_AR31 -to mem2_dq[16]
+set_location_assignment PIN_AT32 -to mem2_dq[17]
+set_location_assignment PIN_AV31 -to mem2_dq[18]
+set_location_assignment PIN_AW31 -to mem2_dq[19]
+set_location_assignment PIN_AM31 -to mem2_dq[20]
+set_location_assignment PIN_AN31 -to mem2_dq[21]
+set_location_assignment PIN_AU32 -to mem2_dq[22]
+set_location_assignment PIN_AV32 -to mem2_dq[23]
+set_location_assignment PIN_AB27 -to mem2_dq[24]
+set_location_assignment PIN_AC27 -to mem2_dq[25]
+set_location_assignment PIN_AH27 -to mem2_dq[26]
+set_location_assignment PIN_AG27 -to mem2_dq[27]
+set_location_assignment PIN_AA27 -to mem2_dq[28]
+set_location_assignment PIN_AA26 -to mem2_dq[29]
+set_location_assignment PIN_AK27 -to mem2_dq[30]
+set_location_assignment PIN_AJ27 -to mem2_dq[31]
+set_location_assignment PIN_AN33 -to mem2_dq[32]
+set_location_assignment PIN_AP34 -to mem2_dq[33]
+set_location_assignment PIN_AT33 -to mem2_dq[34]
+set_location_assignment PIN_AU33 -to mem2_dq[35]
+set_location_assignment PIN_AL34 -to mem2_dq[36]
+set_location_assignment PIN_AM34 -to mem2_dq[37]
+set_location_assignment PIN_AR33 -to mem2_dq[38]
+set_location_assignment PIN_AU34 -to mem2_dq[39]
+set_location_assignment PIN_AU30 -to mem2_dq[40]
+set_location_assignment PIN_AP30 -to mem2_dq[41]
+set_location_assignment PIN_AU29 -to mem2_dq[42]
+set_location_assignment PIN_AN29 -to mem2_dq[43]
+set_location_assignment PIN_AR30 -to mem2_dq[44]
+set_location_assignment PIN_AT30 -to mem2_dq[45]
+set_location_assignment PIN_AN30 -to mem2_dq[46]
+set_location_assignment PIN_AV28 -to mem2_dq[47]
+set_location_assignment PIN_AL30 -to mem2_dq[48]
+set_location_assignment PIN_AK30 -to mem2_dq[49]
+set_location_assignment PIN_AK29 -to mem2_dq[50]
+set_location_assignment PIN_AJ29 -to mem2_dq[51]
+set_location_assignment PIN_AM29 -to mem2_dq[52]
+set_location_assignment PIN_AM28 -to mem2_dq[53]
+set_location_assignment PIN_AL28 -to mem2_dq[54]
+set_location_assignment PIN_AL27 -to mem2_dq[55]
+set_location_assignment PIN_AF26 -to mem2_dq[56]
+set_location_assignment PIN_AE26 -to mem2_dq[57]
+set_location_assignment PIN_AC25 -to mem2_dq[58]
+set_location_assignment PIN_AA25 -to mem2_dq[59]
+set_location_assignment PIN_AG26 -to mem2_dq[60]
+set_location_assignment PIN_AG25 -to mem2_dq[61]
+set_location_assignment PIN_AD26 -to mem2_dq[62]
+set_location_assignment PIN_AC26 -to mem2_dq[63]
+
+set_location_assignment PIN_AF29 -to mem2_dqs[0]
+set_location_assignment PIN_AG31 -to mem2_dqs[1]
+set_location_assignment PIN_AV34 -to mem2_dqs[2]
+set_location_assignment PIN_AD27 -to mem2_dqs[3]
+set_location_assignment PIN_AP33 -to mem2_dqs[4]
+set_location_assignment PIN_AV29 -to mem2_dqs[5]
+set_location_assignment PIN_AP28 -to mem2_dqs[6]
+set_location_assignment PIN_AJ26 -to mem2_dqs[7]
+
+set_location_assignment PIN_AG30 -to mem2_dqs_n[0]
+set_location_assignment PIN_AH31 -to mem2_dqs_n[1]
+set_location_assignment PIN_AW34 -to mem2_dqs_n[2]
+set_location_assignment PIN_AE27 -to mem2_dqs_n[3]
+set_location_assignment PIN_AN32 -to mem2_dqs_n[4]
+set_location_assignment PIN_AW29 -to mem2_dqs_n[5]
+set_location_assignment PIN_AR28 -to mem2_dqs_n[6]
+set_location_assignment PIN_AK26 -to mem2_dqs_n[7]
+
+set_location_assignment PIN_AG24 -to mem2_odt[0]
+set_location_assignment PIN_AL29 -to mem2_odt[1]
+
+set_location_assignment PIN_AA28 -to mem2_ras_n[0]
+set_location_assignment PIN_AW32 -to mem2_reset_n
+set_location_assignment PIN_AU25 -to mem2_we_n[0]
+set_location_assignment PIN_AR34 -to oct2_rzqin
+                                        
+set_location_assignment PIN_AK23 -to ddr2_clk
+##--------------------- End of M2 DDR3 -----------------------------------
+
+
+
+
+###------------------------------PCIe Pin map ------------------------------
+#
+#set_location_assignment PIN_AV39 -to "serial_pcie1_rx_in0(n)"
+#set_location_assignment PIN_AV38 -to serial_pcie1_rx_in0
+#set_location_assignment PIN_AT39 -to "serial_pcie1_rx_in1(n)"
+#set_location_assignment PIN_AT38 -to serial_pcie1_rx_in1
+#set_location_assignment PIN_AP39 -to "serial_pcie1_rx_in2(n)"
+#set_location_assignment PIN_AP38 -to serial_pcie1_rx_in2
+#set_location_assignment PIN_AM39 -to "serial_pcie1_rx_in3(n)"
+#set_location_assignment PIN_AM38 -to serial_pcie1_rx_in3
+#
+#
+#set_location_assignment PIN_AU37 -to "serial_pcie1_tx_out0(n)"
+#set_location_assignment PIN_AU36 -to serial_pcie1_tx_out0
+#set_location_assignment PIN_AR37 -to "serial_pcie1_tx_out1(n)"
+#set_location_assignment PIN_AR36 -to serial_pcie1_tx_out1
+#set_location_assignment PIN_AN37 -to "serial_pcie1_tx_out2(n)"
+#set_location_assignment PIN_AN36 -to serial_pcie1_tx_out2
+#set_location_assignment PIN_AL37 -to "serial_pcie1_tx_out3(n)"
+#set_location_assignment PIN_AL36 -to serial_pcie1_tx_out3
+#
+#set_location_assignment PIN_AF35 -to "pcie1_refclk(n)"
+#set_location_assignment PIN_AF34 -to pcie1_refclk
+#
+#set_location_assignment PIN_AC28 -to pcie_perst
+#
+#
+#
+#
+#set_instance_assignment -name IO_STANDARD LVDS -to clk_100
+#set_location_assignment PIN_AH22 -to clk_100
+#set_location_assignment PIN_AJ22 -to "clk_100(n)"
+#
+#set_instance_assignment -name IO_STANDARD LVDS -to ddr4_clk
+#set_location_assignment PIN_J24 -to "ddr4_clk(n)"
+#set_instance_assignment -name IO_STANDARD LVDS -to "ddr4_clk(n)"
+
+##------------------------------------------------STRG-----------------------
+
+
+
+
+
+set_location_assignment PIN_AJ18 -to mem4_a[0]
+set_location_assignment PIN_AM17 -to mem4_a[1]
+set_location_assignment PIN_AK18 -to mem4_a[2]
+set_location_assignment PIN_AN16 -to mem4_a[3]
+set_location_assignment PIN_AN17 -to mem4_a[4]
+set_location_assignment PIN_AP16 -to mem4_a[5]
+set_location_assignment PIN_AU16 -to mem4_a[6]
+set_location_assignment PIN_AW16 -to mem4_a[7]
+set_location_assignment PIN_AU17 -to mem4_a[8]
+set_location_assignment PIN_AW17 -to mem4_a[9]
+set_location_assignment PIN_AH18 -to mem4_a[10]
+set_location_assignment PIN_AV16 -to mem4_a[11]
+set_location_assignment PIN_AV17 -to mem4_a[12]
+
+set_location_assignment PIN_AJ19 -to mem4_a[13]
+set_location_assignment PIN_AT17 -to mem4_a[14]
+set_location_assignment PIN_AR17 -to mem4_a[15]
+
+
+
+
+
+set_location_assignment PIN_AD17 -to mem4_ba[0]
+set_location_assignment PIN_AD18 -to mem4_ba[1]
+set_location_assignment PIN_AE18 -to mem4_ba[2]
+set_location_assignment PIN_AA14 -to mem4_dm[0]
+set_location_assignment PIN_AH13 -to mem4_dm[1]
+set_location_assignment PIN_AM16 -to mem4_dm[2]
+set_location_assignment PIN_AW14 -to mem4_dm[3]
+set_location_assignment PIN_AK11 -to mem4_dm[4]
+set_location_assignment PIN_AU10 -to mem4_dm[5]
+set_location_assignment PIN_AJ10 -to mem4_dm[6]
+set_location_assignment PIN_AK12 -to mem4_dm[7]
+set_location_assignment PIN_AG14 -to mem4_dq[0]
+set_location_assignment PIN_AA15 -to mem4_dq[1]
+set_location_assignment PIN_AC15 -to mem4_dq[2]
+set_location_assignment PIN_AD16 -to mem4_dq[3]
+set_location_assignment PIN_AH15 -to mem4_dq[4]
+set_location_assignment PIN_AG15 -to mem4_dq[5]
+set_location_assignment PIN_AB15 -to mem4_dq[6]
+set_location_assignment PIN_AB16 -to mem4_dq[7]
+set_location_assignment PIN_AB13 -to mem4_dq[8]
+set_location_assignment PIN_AC14 -to mem4_dq[9]
+set_location_assignment PIN_AG13 -to mem4_dq[10]
+set_location_assignment PIN_AF13 -to mem4_dq[11]
+set_location_assignment PIN_AA13 -to mem4_dq[12]
+set_location_assignment PIN_AA12 -to mem4_dq[13]
+set_location_assignment PIN_AC13 -to mem4_dq[14]
+set_location_assignment PIN_AD14 -to mem4_dq[15]
+set_location_assignment PIN_AF16 -to mem4_dq[16]
+set_location_assignment PIN_AG16 -to mem4_dq[17]
+set_location_assignment PIN_AK17 -to mem4_dq[18]
+set_location_assignment PIN_AL17 -to mem4_dq[19]
+set_location_assignment PIN_AE16 -to mem4_dq[20]
+set_location_assignment PIN_AE17 -to mem4_dq[21]
+set_location_assignment PIN_AH16 -to mem4_dq[22]
+set_location_assignment PIN_AJ17 -to mem4_dq[23]
+set_location_assignment PIN_AN13 -to mem4_dq[24]
+set_location_assignment PIN_AN12 -to mem4_dq[25]
+set_location_assignment PIN_AV13 -to mem4_dq[26]
+set_location_assignment PIN_AW13 -to mem4_dq[27]
+set_location_assignment PIN_AL13 -to mem4_dq[28]
+set_location_assignment PIN_AM13 -to mem4_dq[29]
+set_location_assignment PIN_AP13 -to mem4_dq[30]
+set_location_assignment PIN_AP12 -to mem4_dq[31]
+set_location_assignment PIN_AN11 -to mem4_dq[32]
+set_location_assignment PIN_AR11 -to mem4_dq[33]
+set_location_assignment PIN_AU11 -to mem4_dq[34]
+set_location_assignment PIN_AT11 -to mem4_dq[35]
+set_location_assignment PIN_AL11 -to mem4_dq[36]
+set_location_assignment PIN_AM11 -to mem4_dq[37]
+set_location_assignment PIN_AW11 -to mem4_dq[38]
+set_location_assignment PIN_AV11 -to mem4_dq[39]
+set_location_assignment PIN_AP10 -to mem4_dq[40]
+set_location_assignment PIN_AP9 -to mem4_dq[41]
+set_location_assignment PIN_AM10 -to mem4_dq[42]
+set_location_assignment PIN_AL10 -to mem4_dq[43]
+set_location_assignment PIN_AT9 -to mem4_dq[44]
+set_location_assignment PIN_AR9 -to mem4_dq[45]
+set_location_assignment PIN_AN10 -to mem4_dq[46]
+set_location_assignment PIN_AN9 -to mem4_dq[47]
+set_location_assignment PIN_AE9 -to mem4_dq[48]
+set_location_assignment PIN_AD9 -to mem4_dq[49]
+set_location_assignment PIN_AB9 -to mem4_dq[50]
+set_location_assignment PIN_AB10 -to mem4_dq[51]
+set_location_assignment PIN_AH9 -to mem4_dq[52]
+set_location_assignment PIN_AG9 -to mem4_dq[53]
+set_location_assignment PIN_AC10 -to mem4_dq[54]
+set_location_assignment PIN_AC9 -to mem4_dq[55]
+set_location_assignment PIN_AG12 -to mem4_dq[56]
+set_location_assignment PIN_AF11 -to mem4_dq[57]
+set_location_assignment PIN_AC12 -to mem4_dq[58]
+set_location_assignment PIN_AB12 -to mem4_dq[59]
+set_location_assignment PIN_AE12 -to mem4_dq[60]
+set_location_assignment PIN_AE11 -to mem4_dq[61]
+set_location_assignment PIN_AE10 -to mem4_dq[62]
+set_location_assignment PIN_AD12 -to mem4_dq[63]
+set_location_assignment PIN_AE15 -to mem4_dqs_n[0]
+set_location_assignment PIN_AF14 -to mem4_dqs_n[1]
+set_location_assignment PIN_AG17 -to mem4_dqs_n[2]
+set_location_assignment PIN_AU14 -to mem4_dqs_n[3]
+set_location_assignment PIN_AU12 -to mem4_dqs_n[4]
+set_location_assignment PIN_AW10 -to mem4_dqs_n[5]
+set_location_assignment PIN_AG10 -to mem4_dqs_n[6]
+set_location_assignment PIN_AJ12 -to mem4_dqs_n[7]
+set_location_assignment PIN_AD15 -to mem4_dqs[0]
+set_location_assignment PIN_AE14 -to mem4_dqs[1]
+set_location_assignment PIN_AF17 -to mem4_dqs[2]
+set_location_assignment PIN_AT14 -to mem4_dqs[3]
+set_location_assignment PIN_AT12 -to mem4_dqs[4]
+set_location_assignment PIN_AV10 -to mem4_dqs[5]
+set_location_assignment PIN_AF10 -to mem4_dqs[6]
+set_location_assignment PIN_AH12 -to mem4_dqs[7]
+set_location_assignment PIN_AW8 -to mem4_cas_n[0]
+
+set_location_assignment PIN_AP7 -to mem4_cke[0]
+set_location_assignment PIN_AR7 -to mem4_cke[1]
+
+set_location_assignment PIN_AR6 -to mem4_ck_n[0]
+set_location_assignment PIN_AP6 -to mem4_ck[0]
+
+
+set_location_assignment PIN_AU6 -to mem4_ck_n[1]
+set_location_assignment PIN_AT6 -to mem4_ck[1]
+
+
+
+set_location_assignment PIN_AV7 -to mem4_cs_n[0]
+set_location_assignment PIN_AV8 -to mem4_cs_n[1]
+
+set_location_assignment PIN_AU7 -to mem4_odt[0]
+set_location_assignment PIN_AU8 -to mem4_odt[1]
+
+set_location_assignment PIN_AW7 -to mem4_ras_n[0]
+set_location_assignment PIN_AM8 -to mem4_reset_n
+set_location_assignment PIN_AT8 -to mem4_we_n[0]
+set_location_assignment PIN_AK6 -to oct4_rzqin
+set_location_assignment PIN_AN6 -to ddr4_clk
+
+######################### PCIe Left ###############################################
+set_location_assignment PIN_AV38 -to serial_pcie1_rx_in0
+set_location_assignment PIN_AT38 -to serial_pcie1_rx_in1
+set_location_assignment PIN_AP38 -to serial_pcie1_rx_in2
+set_location_assignment PIN_AM38 -to serial_pcie1_rx_in3
+set_location_assignment PIN_AU36 -to serial_pcie1_tx_out0
+set_location_assignment PIN_AR36 -to serial_pcie1_tx_out1
+set_location_assignment PIN_AN36 -to serial_pcie1_tx_out2
+set_location_assignment PIN_AL36 -to serial_pcie1_tx_out3
+set_location_assignment PIN_AD33 -to pcie1_refclk
+
+
+######################### PCIe Right ###############################################
+
+
+
+set_location_assignment PIN_AC28 -to pcie_perst
+set_location_assignment PIN_AL7 -to clk_100
+
+
+######################### DDR M1 ###############################################
+
+
+
+
+
+                                       
+
+
+													
+													
+
+
+
+
+
+######################### END OF DDR M1 ########################################
+
+######################### DDR M3 ###############################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+######################### END OF DDR M3 ########################################
+
+
+
+set_instance_assignment -name IO_STANDARD "SSTL-15" -to ddr4_clk
+set_instance_assignment -name IO_STANDARD "1.5 V" -to clk_100
+
+##--------------------------- end of referance Board-------------------------------
+
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_instance_assignment -name IO_STANDARD "SSTL-15" -to oct4_rzqin -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[8] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[8] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[8] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[9] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[9] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[9] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[10] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[10] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[10] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[11] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[11] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[11] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[12] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[12] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[12] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[13] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[13] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[13] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[14] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[14] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[14] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[15] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[15] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[15] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[16] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[16] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[16] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[17] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[17] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[17] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[18] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[18] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[18] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[19] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[19] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[19] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[20] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[20] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[20] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[21] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[21] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[21] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[22] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[22] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[22] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[23] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[23] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[23] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[24] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[24] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[24] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[25] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[25] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[25] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[26] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[26] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[26] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[27] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[27] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[27] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[28] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[28] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[28] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[29] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[29] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[29] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[30] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[30] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[30] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[31] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[31] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[31] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[32] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[32] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[32] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[33] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[33] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[33] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[34] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[34] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[34] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[35] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[35] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[35] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[36] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[36] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[36] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[37] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[37] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[37] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[38] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[38] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[38] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[39] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[39] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[39] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[40] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[40] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[40] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[41] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[41] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[41] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[42] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[42] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[42] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[43] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[43] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[43] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[44] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[44] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[44] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[45] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[45] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[45] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[46] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[46] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[46] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[47] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[47] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[47] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[48] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[48] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[48] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[49] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[49] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[49] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[50] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[50] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[50] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[51] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[51] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[51] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[52] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[52] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[52] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[53] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[53] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[53] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[54] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[54] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[54] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[55] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[55] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[55] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[56] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[56] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[56] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[57] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[57] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[57] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[58] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[58] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[58] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[59] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[59] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[59] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[60] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[60] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[60] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[61] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[61] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[61] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[62] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[62] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[62] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dq[63] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dq[63] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dq[63] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs_n[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs_n[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs_n[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs_n[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs_n[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs_n[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs_n[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs_n[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs_n[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs_n[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs_n[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs_n[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs_n[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs_n[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs_n[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_dqs_n[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem4_dqs_n[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dqs_n[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_ck[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_ck[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name TERMINATION_CONTROL_BLOCK "pcie_hip_avmm:u0|pcie_hip_avmm_mem_if_ddr3_emif_0:mem_if_ddr3_emif_0|altera_mem_if_oct_stratixv:oct0|sd1a_0" -to mem4_ck[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name TERMINATION_CONTROL_BLOCK "pcie_hip_avmm:u0|pcie_hip_avmm_mem_if_ddr3_emif_0:mem_if_ddr3_emif_0|altera_mem_if_oct_stratixv:oct0|sd1a_0" -to mem4_ck_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_ck_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_ck_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[10] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[10] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[11] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[11] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[12] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[12] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[13] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[14] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[15] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[8] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[8] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[9] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_a[9] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_ba[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_ba[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_ba[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_ba[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_ba[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_ba[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_cs_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_cs_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+
+
+
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_we_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_we_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_ras_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_ras_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_cas_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_cas_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_cke[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_cke[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_odt[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_odt[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+
+
+
+set_instance_assignment -name IO_STANDARD 1.5V -to mem4_reset_n -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_reset_n -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dm[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dm[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dm[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dm[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dm[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dm[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dm[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dm[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dm[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dm[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dm[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dm[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dm[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dm[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_dm[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_dm[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[8] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[9] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[10] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[11] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[12] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[13] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[14] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[15] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[16] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[17] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[18] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[19] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[20] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[21] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[22] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[23] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[24] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[25] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[26] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[27] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[28] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[29] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[30] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[31] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[32] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[33] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[34] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[35] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[36] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[37] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[38] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[39] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[40] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[41] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[42] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[43] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[44] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[45] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[46] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[47] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[48] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[49] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[50] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[51] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[52] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[53] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[54] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[55] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[56] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[57] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[58] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[59] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[60] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[61] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[62] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dq[63] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dm[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dm[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dm[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dm[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dm[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dm[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dm[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dm[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs_n[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs_n[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs_n[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs_n[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs_n[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_dqs_n[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[10] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[11] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[12] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[13] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+#set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[14] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+#set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[15] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+#set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_cs_n[1] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+#set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_cke[1] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+#set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_odt[1] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[8] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[9] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_ba[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_ba[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_ba[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_cs_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_we_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_ras_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_cas_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_cke[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_odt[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_reset_n -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_ck[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_ck_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem4_if_ddr3_emif_0|pll0|pll_avl_clk -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem4_if_ddr3_emif_0|pll0|pll_config_clk -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to u0|mem4_if_ddr3_emif_0|pll0|afi_clk -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem4_if_ddr3_emif_0|pll0|pll_hr_clk -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to u0|mem4_if_ddr3_emif_0|pll0|pll_p2c_read_clk -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_0|p0|umemphy|ureset|phy_reset_n -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_0|s0|sequencer_rw_mgr_inst|rw_mgr_inst|rw_mgr_core_inst|rw_soft_reset_n -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[0] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[1] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[2] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[3] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[4] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[5] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[6] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[7] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name ENABLE_BENEFICIAL_SKEW_OPTIMIZATION_FOR_NON_GLOBAL_CLOCKS ON -to u0|mem4_if_ddr3_emif_0 -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name PLL_COMPENSATION_MODE DIRECT -to u0|mem4_if_ddr3_emif_0|pll0|fbout -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name MAX_FANOUT 4 -to u0|mem4_if_ddr3_emif_0|p0|umemphy|uio_pads|wrdata_en_qr_to_hr|dataout_r[*][*] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name FORM_DDR_CLUSTERING_CLIQUE ON -to u0|mem4_if_ddr3_emif_0|p0|umemphy|*qr_to_hr* -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_global_assignment -name USE_DLL_FREQUENCY_FOR_DQS_DELAY_CHAIN ON
+set_global_assignment -name UNIPHY_SEQUENCER_DQS_CONFIG_ENABLE ON
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name UNIPHY_TEMP_VER_CODE 502736616
+set_global_assignment -name ECO_REGENERATE_REPORT ON
+
+set_instance_assignment -name IO_STANDARD HCSL -to pcie1_refclk
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie1_rx_in0
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie1_rx_in1
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie1_rx_in2
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie1_rx_in3
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie1_tx_out0
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie1_tx_out1
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie1_tx_out2
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie1_tx_out3
+
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to "serial_pcie1_rx_in1(n)"
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to "serial_pcie1_rx_in2(n)"
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to "serial_pcie1_rx_in3(n)"
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to "serial_pcie1_tx_out0(n)"
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to "serial_pcie1_tx_out1(n)"
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to "serial_pcie1_tx_out2(n)"
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to "serial_pcie1_tx_out3(n)"
+
+
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
+set_instance_assignment -name IO_STANDARD "SSTL-15" -to oct2_rzqin -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[8] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[8] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[8] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[9] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[9] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[9] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[10] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[10] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[10] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[11] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[11] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[11] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[12] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[12] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[12] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[13] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[13] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[13] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[14] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[14] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[14] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[15] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[15] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[15] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[16] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[16] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[16] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[17] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[17] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[17] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[18] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[18] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[18] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[19] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[19] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[19] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[20] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[20] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[20] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[21] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[21] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[21] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[22] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[22] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[22] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[23] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[23] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[23] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[24] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[24] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[24] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[25] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[25] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[25] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[26] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[26] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[26] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[27] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[27] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[27] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[28] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[28] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[28] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[29] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[29] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[29] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[30] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[30] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[30] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[31] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[31] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[31] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[32] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[32] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[32] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[33] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[33] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[33] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[34] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[34] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[34] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[35] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[35] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[35] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[36] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[36] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[36] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[37] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[37] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[37] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[38] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[38] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[38] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[39] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[39] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[39] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[40] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[40] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[40] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[41] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[41] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[41] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[42] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[42] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[42] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[43] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[43] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[43] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[44] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[44] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[44] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[45] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[45] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[45] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[46] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[46] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[46] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[47] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[47] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[47] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[48] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[48] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[48] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[49] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[49] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[49] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[50] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[50] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[50] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[51] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[51] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[51] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[52] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[52] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[52] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[53] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[53] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[53] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[54] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[54] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[54] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[55] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[55] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[55] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[56] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[56] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[56] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[57] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[57] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[57] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[58] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[58] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[58] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[59] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[59] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[59] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[60] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[60] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[60] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[61] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[61] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[61] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[62] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[62] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[62] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dq[63] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dq[63] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dq[63] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs_n[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs_n[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs_n[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs_n[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs_n[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs_n[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs_n[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs_n[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs_n[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs_n[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs_n[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs_n[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs_n[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs_n[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs_n[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_dqs_n[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to mem2_dqs_n[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dqs_n[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_ck[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_ck[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name TERMINATION_CONTROL_BLOCK "pcie_hip_avmm:u0|pcie_hip_avmm_mem_if_ddr3_emif_0:mem_if_ddr3_emif_1|altera_mem_if_oct_stratixv:oct0|sd1a_0" -to mem2_ck[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name TERMINATION_CONTROL_BLOCK "pcie_hip_avmm:u0|pcie_hip_avmm_mem_if_ddr3_emif_0:mem_if_ddr3_emif_1|altera_mem_if_oct_stratixv:oct0|sd1a_0" -to mem2_ck_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_ck_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_ck_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[10] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[10] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[11] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[11] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[12] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[12] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[8] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[8] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[9] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[9] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_ba[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_ba[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_ba[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_ba[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_ba[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_ba[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_cs_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_cs_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_we_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_we_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_ras_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_ras_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_cas_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_cas_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_cke[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_cke[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_odt[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_odt[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD 1.5V -to mem2_reset_n -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_reset_n -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dm[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dm[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dm[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dm[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dm[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dm[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dm[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dm[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dm[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dm[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dm[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dm[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dm[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dm[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_dm[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_dm[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15" -to ddr2_clk -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[8] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[9] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[10] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[11] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[12] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[13] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[14] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[15] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[16] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[17] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[18] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[19] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[20] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[21] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[22] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[23] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[24] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[25] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[26] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[27] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[28] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[29] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[30] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[31] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[32] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[33] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[34] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[35] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[36] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[37] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[38] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[39] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[40] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[41] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[42] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[43] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[44] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[45] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[46] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[47] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[48] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[49] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[50] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[51] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[52] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[53] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[54] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[55] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[56] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[57] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[58] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[59] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[60] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[61] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[62] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dq[63] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dm[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dm[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dm[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dm[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dm[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dm[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dm[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dm[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs_n[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs_n[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs_n[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs_n[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs_n[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_dqs_n[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[10] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[11] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[12] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[8] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[9] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_ba[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_ba[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_ba[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_cs_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_we_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_ras_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_cas_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_cke[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_odt[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_reset_n -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_ck[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_ck_n[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem4_if_ddr3_emif_1|pll0|pll_avl_clk -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem4_if_ddr3_emif_1|pll0|pll_config_clk -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to u0|mem4_if_ddr3_emif_1|pll0|afi_clk -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem4_if_ddr3_emif_1|pll0|pll_hr_clk -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to u0|mem4_if_ddr3_emif_1|pll0|pll_p2c_read_clk -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_1|p0|umemphy|ureset|phy_reset_n -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_1|s0|sequencer_rw_mgr_inst|rw_mgr_inst|rw_mgr_core_inst|rw_soft_reset_n -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[0] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[1] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[2] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[3] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[4] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[5] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[6] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[7] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name ENABLE_BENEFICIAL_SKEW_OPTIMIZATION_FOR_NON_GLOBAL_CLOCKS ON -to u0|mem4_if_ddr3_emif_1 -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name PLL_COMPENSATION_MODE DIRECT -to u0|mem4_if_ddr3_emif_1|pll0|fbout -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name MAX_FANOUT 4 -to u0|mem4_if_ddr3_emif_1|p0|umemphy|uio_pads|wrdata_en_qr_to_hr|dataout_r[*][*] -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name FORM_DDR_CLUSTERING_CLIQUE ON -to u0|mem4_if_ddr3_emif_1|p0|umemphy|*qr_to_hr* -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "ACTIVE SERIAL X1"
+set_global_assignment -name STRATIXII_CONFIGURATION_DEVICE EPCQ256
+set_global_assignment -name RESERVE_DATA0_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_instance_assignment -name TERMINATION_CONTROL_BLOCK "pcie_hip_avmm:u0|pcie_hip_avmm_mem_if_ddr3_emif_0:mem_if_ddr3_emif_0|altera_mem_if_oct_stratixv:oct0|sd1a_0" -to mem4_ck[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name TERMINATION_CONTROL_BLOCK "pcie_hip_avmm:u0|pcie_hip_avmm_mem_if_ddr3_emif_0:mem_if_ddr3_emif_0|altera_mem_if_oct_stratixv:oct0|sd1a_0" -to mem4_ck_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_ck[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_ck[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem4_ck_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem4_ck_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[13] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[14] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_a[15] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_cs_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_cs_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_cke[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_cke[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem4_odt[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem4_odt[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[14] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_a[15] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_cs_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_cke[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_odt[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_ck[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem4_ck_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_0|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_0|if_csr_m0|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name TERMINATION_CONTROL_BLOCK "pcie_hip_avmm:u0|pcie_hip_avmm_mem_if_ddr3_emif_0:mem_if_ddr3_emif_1|altera_mem_if_oct_stratixv:oct0|sd1a_0" -to mem2_ck[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name TERMINATION_CONTROL_BLOCK "pcie_hip_avmm:u0|pcie_hip_avmm_mem_if_ddr3_emif_0:mem_if_ddr3_emif_1|altera_mem_if_oct_stratixv:oct0|sd1a_0" -to mem2_ck_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_ck[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_ck[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to mem2_ck_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to mem2_ck_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[13] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[13] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[14] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[14] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_a[15] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[15] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_cs_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_cs_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_cke[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_cke[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to mem2_odt[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_odt[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[13] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[14] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_a[15] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_cs_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_cke[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_odt[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_ck[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to mem2_ck_n[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_1|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem4_if_ddr3_emif_1|if_csr_m0|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out -tag __pcie_hip_avmm4_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "1.5 V" -to pcie_perst
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE counters.stp
+set_location_assignment PIN_AE19 -to gpio_intr[0]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to gpio_intr[0]
+set_location_assignment PIN_AF19 -to gpio_intr[1]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to gpio_intr[1]
+set_location_assignment PIN_AG19 -to gpio_intr[2]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to gpio_intr[2]
+set_location_assignment PIN_AG18 -to gpio_intr[3]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to gpio_intr[3]
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem_if_ddr3_emif_0|pll0|pll_avl_clk -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem_if_ddr3_emif_0|pll0|pll_config_clk -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to u0|mem_if_ddr3_emif_0|pll0|afi_clk -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem_if_ddr3_emif_0|pll0|pll_hr_clk -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to u0|mem_if_ddr3_emif_0|pll0|pll_p2c_read_clk -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|ureset|phy_reset_n -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|s0|sequencer_rw_mgr_inst|rw_mgr_inst|rw_mgr_core_inst|rw_soft_reset_n -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|if_csr_m0|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name ENABLE_BENEFICIAL_SKEW_OPTIMIZATION_FOR_NON_GLOBAL_CLOCKS ON -to u0|mem_if_ddr3_emif_0 -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PLL_COMPENSATION_MODE DIRECT -to u0|mem_if_ddr3_emif_0|pll0|fbout -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name MAX_FANOUT 4 -to u0|mem_if_ddr3_emif_0|p0|umemphy|uio_pads|wrdata_en_qr_to_hr|dataout_r[*][*] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name FORM_DDR_CLUSTERING_CLIQUE ON -to u0|mem_if_ddr3_emif_0|p0|umemphy|*qr_to_hr* -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem_if_ddr3_emif_1|pll0|pll_avl_clk -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem_if_ddr3_emif_1|pll0|pll_config_clk -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to u0|mem_if_ddr3_emif_1|pll0|afi_clk -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem_if_ddr3_emif_1|pll0|pll_hr_clk -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to u0|mem_if_ddr3_emif_1|pll0|pll_p2c_read_clk -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_1|p0|umemphy|ureset|phy_reset_n -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_1|s0|sequencer_rw_mgr_inst|rw_mgr_inst|rw_mgr_core_inst|rw_soft_reset_n -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_1|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_1|if_csr_m0|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[1] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[2] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[3] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[4] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[5] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[6] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_1|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[7] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name ENABLE_BENEFICIAL_SKEW_OPTIMIZATION_FOR_NON_GLOBAL_CLOCKS ON -to u0|mem_if_ddr3_emif_1 -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PLL_COMPENSATION_MODE DIRECT -to u0|mem_if_ddr3_emif_1|pll0|fbout -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name MAX_FANOUT 4 -to u0|mem_if_ddr3_emif_1|p0|umemphy|uio_pads|wrdata_en_qr_to_hr|dataout_r[*][*] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name FORM_DDR_CLUSTERING_CLIQUE ON -to u0|mem_if_ddr3_emif_1|p0|umemphy|*qr_to_hr* -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+set_instance_assignment -name IO_STANDARD HCSL -to pcie2_refclk
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie2_rx_in0
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie2_rx_in1
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie2_rx_in2
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie2_rx_in3
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie2_tx_out0
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie2_tx_out1
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie2_tx_out2
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to serial_pcie2_tx_out3
+
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to mem2_a[0] -tag __pcie_hip_avmm_mem_if_ddr3_emif_0_p0
+
+
+
+
+
+
+set_global_assignment -name FLOW_ENABLE_RTL_VIEWER ON
+set_global_assignment -name ENABLE_LOGIC_ANALYZER_INTERFACE ON
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_RUN_TOOL_AUTOMATICALLY OFF -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name IP_SEARCH_PATHS /home/grads/t/teko/dfc/dfc_bk2/DFC_FPGA/IPCORE/pcie_hip_avmm/pgtb
+set_global_assignment -name QIP_FILE IPCORE/fifo/fifo32x64.qip
+set_global_assignment -name VERILOG_FILE IPCORE/moving_engine.v
+set_global_assignment -name QIP_FILE IPCORE/pcie_hip_avmm/synthesis/pcie_hip_avmm.qip
+set_global_assignment -name QIP_FILE IPCORE/asmi/synthesis/asmi.qip
+set_global_assignment -name SDC_FILE SDC/PCIe_Mem.sdc
+set_global_assignment -name QIP_FILE IPCORE/pll/pll_50.qip
+set_global_assignment -name QIP_FILE IPCORE/pll/pll.qip
+set_global_assignment -name VHDL_FILE IPCORE/SFL/alt_ex_1.vhd
+set_global_assignment -name VHDL_FILE IPCORE/SFL/epcq_registers.vhd
+set_global_assignment -name VHDL_FILE IPCORE/SFL/epcq_wr_data.vhd
+set_global_assignment -name VHDL_FILE PCIe_Mem.vhd
+set_global_assignment -name VHDL_FILE RTL/avl_to_asmi.vhd
+set_global_assignment -name CDF_FILE output_files/Sept.cdf
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name BDF_FILE PCIe_Mem.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE mem_test_sm.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
