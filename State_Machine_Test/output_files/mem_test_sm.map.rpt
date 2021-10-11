@@ -1,0 +1,415 @@
+Analysis & Synthesis report for mem_test_sm
+Mon Oct 11 17:05:02 2021
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |mem_test_sm|state_r
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |mem_test_sm
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Oct 11 17:05:02 2021           ;
+; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
+; Revision Name                   ; mem_test_sm                                     ;
+; Top-level Entity Name           ; mem_test_sm                                     ;
+; Family                          ; Stratix V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 178                                             ;
+; Total pins                      ; 424                                             ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI STD RX PCSs          ; 0                                               ;
+; Total HSSI 10G RX PCSs          ; 0                                               ;
+; Total HSSI GEN3 RX PCSs         ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI STD TX PCSs          ; 0                                               ;
+; Total HSSI 10G TX PCSs          ; 0                                               ;
+; Total HSSI GEN3 TX PCSs         ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total HSSI PIPE GEN1_2s         ; 0                                               ;
+; Total HSSI GEN3s                ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5SGXEA7H3F35C3     ;                    ;
+; Top-level entity name                                                           ; mem_test_sm        ; mem_test_sm        ;
+; Family name                                                                     ; Stratix V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processors 3-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                             ;
++-----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                        ; Library ;
++-----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; ../Quartus_project/mem_test_sm.sv ; yes             ; User SystemVerilog HDL File  ; /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv ;         ;
++-----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 165       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 278       ;
+;     -- 7 input functions                    ; 8         ;
+;     -- 6 input functions                    ; 43        ;
+;     -- 5 input functions                    ; 33        ;
+;     -- 4 input functions                    ; 49        ;
+;     -- <=3 input functions                  ; 145       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 178       ;
+;                                             ;           ;
+; I/O pins                                    ; 424       ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 178       ;
+; Total fan-out                               ; 2250      ;
+; Average fan-out                             ; 1.73      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                     ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |mem_test_sm               ; 278 (278)         ; 178 (178)    ; 0                 ; 0          ; 424  ; 0            ; |mem_test_sm        ; mem_test_sm ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |mem_test_sm|state_r                                                                                                                                                                                ;
++------------------------------------+----------------------------+-------------------------------+------------------------------+--------------------------------+------------------------------------+--------------+
+; Name                               ; state_r.MEM_TEST_SM_FINISH ; state_r.MEM_TEST_SM_TALLY_MEM ; state_r.MEM_TEST_SM_READ_MEM ; state_r.MEM_TEST_SM_HAMMER_MEM ; state_r.MEM_TEST_SM_INITIALIZE_MEM ; state_r.0000 ;
++------------------------------------+----------------------------+-------------------------------+------------------------------+--------------------------------+------------------------------------+--------------+
+; state_r.0000                       ; 0                          ; 0                             ; 0                            ; 0                              ; 0                                  ; 0            ;
+; state_r.MEM_TEST_SM_INITIALIZE_MEM ; 0                          ; 0                             ; 0                            ; 0                              ; 1                                  ; 1            ;
+; state_r.MEM_TEST_SM_HAMMER_MEM     ; 0                          ; 0                             ; 0                            ; 1                              ; 0                                  ; 1            ;
+; state_r.MEM_TEST_SM_READ_MEM       ; 0                          ; 0                             ; 1                            ; 0                              ; 0                                  ; 1            ;
+; state_r.MEM_TEST_SM_TALLY_MEM      ; 0                          ; 1                             ; 0                            ; 0                              ; 0                                  ; 1            ;
+; state_r.MEM_TEST_SM_FINISH         ; 1                          ; 0                             ; 0                            ; 0                              ; 0                                  ; 1            ;
++------------------------------------+----------------------------+-------------------------------+------------------------------+--------------------------------+------------------------------------+--------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; state_r~2                             ; Lost fanout        ;
+; state_r~3                             ; Lost fanout        ;
+; state_r~4                             ; Lost fanout        ;
+; state_r~5                             ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 178   ;
+; Number of registers using Synchronous Clear  ; 170   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 128   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 4:1                ; 64 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; Yes        ; |mem_test_sm|bit_flip_count_r[33] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |mem_test_sm|word_q_r[1]          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |mem_test_sm|word_r[7]            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |mem_test_sm|count_r[19]          ;
+; 5:1                ; 64 bits   ; 192 LEs       ; 64 LEs               ; 128 LEs                ; Yes        ; |mem_test_sm|gen_address_r[17]    ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mem_test_sm|Mux7                 ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mem_test_sm|Mux14                ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mem_test_sm|Mux28                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |mem_test_sm     ;
++----------------------------+----------------------------------+-----------------+
+; Parameter Name             ; Value                            ; Type            ;
++----------------------------+----------------------------------+-----------------+
+; ADDR_WIDTH                 ; 00000000000000000000000001000000 ; Unsigned Binary ;
+; WORD_WIDTH                 ; 00000000000000000000000001000000 ; Unsigned Binary ;
+; ROW_WIDTH                  ; 00000000000000000000000000001100 ; Unsigned Binary ;
+; ROW_POS                    ; 00000000000000000000000000001010 ; Unsigned Binary ;
+; COL_WIDTH                  ; 00000000000000000000000000001010 ; Unsigned Binary ;
+; COL_POS                    ; 00000000000000000000000000000000 ; Unsigned Binary ;
+; MEM_TEST_SM_START          ; 0000                             ; Unsigned Binary ;
+; MEM_TEST_SM_INITIALIZE_MEM ; 0001                             ; Unsigned Binary ;
+; MEM_TEST_SM_HAMMER_MEM     ; 0010                             ; Unsigned Binary ;
+; MEM_TEST_SM_READ_MEM       ; 0011                             ; Unsigned Binary ;
+; MEM_TEST_SM_TALLY_MEM      ; 0100                             ; Unsigned Binary ;
+; MEM_TEST_SM_FINISH         ; 0101                             ; Unsigned Binary ;
++----------------------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 424                         ;
+; stratixv_ff           ; 178                         ;
+;     ENA SCLR          ; 128                         ;
+;     SCLR              ; 42                          ;
+;     plain             ; 8                           ;
+; stratixv_lcell_comb   ; 280                         ;
+;     arith             ; 132                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 120                         ;
+;         2 data inputs ; 11                          ;
+;     extend            ; 8                           ;
+;         7 data inputs ; 8                           ;
+;     normal            ; 140                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 49                          ;
+;         5 data inputs ; 33                          ;
+;         6 data inputs ; 43                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.30                        ;
+; Average LUT depth     ; 3.01                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+    Info: Processing started: Mon Oct 11 17:04:25 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mem_test_sm -c mem_test_sm
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv
+    Info (12023): Found entity 1: mem_test_sm File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 7
+Info (12127): Elaborating entity "mem_test_sm" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at mem_test_sm.sv(139): truncated value with size 84 to match size of target (64) File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 139
+Warning (10027): Verilog HDL or VHDL warning at the mem_test_sm.sv(192): index expression is not wide enough to address all of the elements in the array File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 192
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "state[3]" is stuck at GND File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 38
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 35 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "pattern_rb[32]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[33]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[34]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[35]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[36]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[37]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[38]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[39]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[40]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[41]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[42]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[43]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[44]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[45]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[46]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[47]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[48]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[49]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[50]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[51]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[52]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[53]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[54]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[55]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[56]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[57]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[58]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[59]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[60]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[61]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[62]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[63]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[29]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[30]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+    Warning (15610): No output dependent on input pin "pattern_rb[31]" File: /home/grads/m/maccoy.merrell/Desktop/Rowhammer_FPGA_Stratix/Stratix_V_FPGA_Rowhammer/Quartus_project/mem_test_sm.sv Line: 32
+Info (21057): Implemented 702 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 227 input pins
+    Info (21059): Implemented 197 output pins
+    Info (21061): Implemented 278 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 1401 megabytes
+    Info: Processing ended: Mon Oct 11 17:05:02 2021
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:32
+
+

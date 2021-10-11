@@ -1,0 +1,23 @@
+Analysis & Synthesis Status : Successful - Mon Oct 11 17:05:02 2021
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+Revision Name : mem_test_sm
+Top-level Entity Name : mem_test_sm
+Family : Stratix V
+Logic utilization (in ALMs) : N/A
+Total registers : 178
+Total pins : 424
+Total virtual pins : 0
+Total block memory bits : 0
+Total DSP Blocks : 0
+Total HSSI STD RX PCSs : 0
+Total HSSI 10G RX PCSs : 0
+Total HSSI GEN3 RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI STD TX PCSs : 0
+Total HSSI 10G TX PCSs : 0
+Total HSSI GEN3 TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total HSSI PIPE GEN1_2s : 0
+Total HSSI GEN3s : 0
+Total PLLs : 0
+Total DLLs : 0

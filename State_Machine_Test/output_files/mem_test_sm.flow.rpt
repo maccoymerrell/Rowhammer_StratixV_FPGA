@@ -1,0 +1,140 @@
+Flow report for mem_test_sm
+Mon Oct 11 17:09:36 2021
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Mon Oct 11 17:09:36 2021           ;
+; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
+; Revision Name                   ; mem_test_sm                                     ;
+; Top-level Entity Name           ; mem_test_sm                                     ;
+; Family                          ; Stratix V                                       ;
+; Device                          ; 5SGXEA7H3F35C3                                  ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 168 / 234,720 ( < 1 % )                         ;
+; Total registers                 ; 178                                             ;
+; Total pins                      ; 424 / 664 ( 64 % )                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0 / 52,428,800 ( 0 % )                          ;
+; Total DSP Blocks                ; 0 / 256 ( 0 % )                                 ;
+; Total HSSI STD RX PCSs          ; 0 / 24 ( 0 % )                                  ;
+; Total HSSI 10G RX PCSs          ; 0 / 24 ( 0 % )                                  ;
+; Total HSSI GEN3 RX PCSs         ; 0 / 24 ( 0 % )                                  ;
+; Total HSSI PMA RX Deserializers ; 0 / 24 ( 0 % )                                  ;
+; Total HSSI STD TX PCSs          ; 0 / 24 ( 0 % )                                  ;
+; Total HSSI 10G TX PCSs          ; 0 / 24 ( 0 % )                                  ;
+; Total HSSI GEN3 TX PCSs         ; 0 / 24 ( 0 % )                                  ;
+; Total HSSI PMA TX Serializers   ; 0 / 24 ( 0 % )                                  ;
+; Total HSSI PIPE GEN1_2s         ; 0 / 24 ( 0 % )                                  ;
+; Total HSSI GEN3s                ; 0 / 24 ( 0 % )                                  ;
+; Total PLLs                      ; 0 / 68 ( 0 % )                                  ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 10/11/2021 17:04:51 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; mem_test_sm         ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                           ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 14038011130490.163398989105101        ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                  ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --             ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:37     ; 1.0                     ; 1387 MB             ; 00:00:32                           ;
+; Fitter                    ; 00:02:18     ; 1.0                     ; 4233 MB             ; 00:04:16                           ;
+; Assembler                 ; 00:01:09     ; 1.0                     ; 1674 MB             ; 00:00:26                           ;
+; TimeQuest Timing Analyzer ; 00:00:26     ; 1.2                     ; 1973 MB             ; 00:00:09                           ;
+; EDA Netlist Writer        ; 00:00:27     ; 1.0                     ; 1456 MB             ; 00:00:01                           ;
+; Total                     ; 00:04:57     ; --                      ; --                  ; 00:05:24                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++---------------------------+------------------+---------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++---------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis      ; ECEWKGSW052E01   ; This computer ; 29         ; x86_64         ;
+; Fitter                    ; ECEWKGSW052E01   ; This computer ; 29         ; x86_64         ;
+; Assembler                 ; ECEWKGSW052E01   ; This computer ; 29         ; x86_64         ;
+; TimeQuest Timing Analyzer ; ECEWKGSW052E01   ; This computer ; 29         ; x86_64         ;
+; EDA Netlist Writer        ; ECEWKGSW052E01   ; This computer ; 29         ; x86_64         ;
++---------------------------+------------------+---------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off mem_test_sm -c mem_test_sm
+quartus_fit --read_settings_files=off --write_settings_files=off mem_test_sm -c mem_test_sm
+quartus_asm --read_settings_files=off --write_settings_files=off mem_test_sm -c mem_test_sm
+quartus_sta mem_test_sm -c mem_test_sm
+quartus_eda --read_settings_files=off --write_settings_files=off mem_test_sm -c mem_test_sm
+
+
+

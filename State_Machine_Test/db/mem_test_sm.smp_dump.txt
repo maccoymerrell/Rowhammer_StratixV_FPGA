@@ -1,0 +1,9 @@
+
+State Machine - |mem_test_sm|state_r
+Name state_r.MEM_TEST_SM_FINISH state_r.MEM_TEST_SM_TALLY_MEM state_r.MEM_TEST_SM_READ_MEM state_r.MEM_TEST_SM_HAMMER_MEM state_r.MEM_TEST_SM_INITIALIZE_MEM state_r.0000 
+state_r.0000 0 0 0 0 0 0 
+state_r.MEM_TEST_SM_INITIALIZE_MEM 0 0 0 0 1 1 
+state_r.MEM_TEST_SM_HAMMER_MEM 0 0 0 1 0 1 
+state_r.MEM_TEST_SM_READ_MEM 0 0 1 0 0 1 
+state_r.MEM_TEST_SM_TALLY_MEM 0 1 0 0 0 1 
+state_r.MEM_TEST_SM_FINISH 1 0 0 0 0 1 

@@ -2,11 +2,7 @@
 //timescale here for sim
 `timescale 1ns / 1ps
 
-`define MEM_TEST_SM_START 				4'b0 //start state, loads input pattern/address into registers
-`define MEM_TEST_SM_INITIALIZE_MEM	4'b1 //initializes target mem area
-`define MEM_TEST_SM_HAMMER_MEM		4'b2 //generates reads to mem to hammer
-`define MEM_TEST_SM_READ_MEM			4'b3 //reads target mem area back
-`define MEM_TEST_SM_FINISH				4'b4 //finish
+
 
 module mem_test_sm
 	#(
@@ -15,9 +11,15 @@ module mem_test_sm
 	  parameter ROW_WIDTH  = 'd12,		//row bits in address
 	  parameter ROW_POS    = 'd10,		//pos of row bits in address
 	  parameter COL_WIDTH  = 'd10,		//col bits in address
-	  parameter COL_POS	  = 'd0			//pos of col bits in address
-	  )
-	(
+	  parameter COL_POS	  = 'd0,			//pos of col bits in address
+	  parameter MEM_TEST_SM_START   			= 4'd0, //start state, loads input pattern/address into registers
+	  parameter MEM_TEST_SM_INITIALIZE_MEM	= 4'd1, //initializes target mem area
+	  parameter MEM_TEST_SM_HAMMER_MEM		= 4'd2, //generates reads to mem to hammer
+	  parameter MEM_TEST_SM_READ_MEM			= 4'd3, //reads target mem area back
+	  parameter MEM_TEST_SM_TALLY_MEM		= 4'd4, //tally all bit flips in word
+	  parameter MEM_TEST_SM_FINISH			= 4'd5 //finish
+	)
+	(	
 	//these should be gotten from registers on startup
 	input [WORD_WIDTH-1:0] pattern,		//pattern written to address
 	input [ADDR_WIDTH-1:0] address,		//target address for attack (row)
@@ -47,6 +49,7 @@ module mem_test_sm
 	logic [3:0]  state_r;						//state of state machine
 	logic 		 direction_r;					//direction of hammer ("left" or "right" attack)
 	logic [COL_WIDTH-1:0] word_r;				//current word being read/written to
+	logic [1:0]  word_q_r;						//current quarter of word
 	
 	//data recording
 	logic [63:0] bit_flip_count_r;			//total bit flips recorded
@@ -58,6 +61,7 @@ module mem_test_sm
 			count_r		  <= 'b0;
 			state_r		  <= 'b0;
 			word_r		  <= 'b0;
+			word_q_r		  <= 'b0;
 			bit_flip_count_r <= 'b0;
 		end
 		else begin
@@ -83,11 +87,22 @@ module mem_test_sm
 					end
 				end
 				MEM_TEST_SM_READ_MEM: begin //once all words in target row have been read from, advance
-					if((word_r < {COL_WIDTH{1'b1}}) & confirm) begin
+						if(confirm) begin
+							state_r <= MEM_TEST_SM_TALLY_MEM;
+						end
+						else begin
+							state_r <= MEM_TEST_SM_READ_MEM;
+						end
+				end
+				MEM_TEST_SM_TALLY_MEM: begin
+					if(word_q_r == 2'b11 & word_r == {COL_WIDTH{1'b1}}) begin
+						state_r <= MEM_TEST_SM_FINISH;
+					end
+					else if(word_q_r == 2'b11) begin
 						state_r <= MEM_TEST_SM_READ_MEM;
 					end
 					else begin
-						state_r <= MEM_TEST_SM_FINISH;
+						state_r <= MEM_TEST_SM_TALLY_MEM;
 					end
 				end
 				MEM_TEST_SM_FINISH: begin //loop indefinitely, wait for reset
@@ -125,6 +140,9 @@ module mem_test_sm
 															 {address[ADDR_WIDTH-1:ROW_POS + ROW_WIDTH], address[ROW_POS + ROW_WIDTH-1:ROW_POS] + 'b1, address[ROW_POS-1:0]};
 				end
 			end
+			else if(state_r == MEM_TEST_SM_TALLY_MEM) begin
+				gen_address_r <= gen_address_r;
+			end
 			else begin
 				gen_address_r <= 'b0;
 			end
@@ -135,11 +153,24 @@ module mem_test_sm
 					word_r <= 'b0;
 				end
 				else begin
-					word_r <= word_r + 'b1;
+					word_r <= word_r + {{(COL_WIDTH-1){1'b0}},1'b1};
 				end
 			end
 			else begin
 				word_r <= 'b0;
+			end
+			
+			//word_q_r
+			if(state_r == MEM_TEST_SM_TALLY_MEM) begin
+				if(word_q_r == 2'b11) begin
+					word_q_r <= 'b0;
+				end
+				else begin
+					word_q_r <= word_q_r + 2'b01;
+				end
+			end
+			else begin
+				word_q_r <= 'b0;
 			end
 			
 			//count_r
@@ -148,7 +179,7 @@ module mem_test_sm
 					count_r <= 'b0;
 				end
 				else begin
-					count_r <= count_r + 'b1;
+					count_r <= count_r + 32'd1;
 				end
 			end
 			else begin
@@ -156,9 +187,9 @@ module mem_test_sm
 			end
 			
 			//total bit flips bit_flip_count_r
-			if((state_r == MEM_TEST_SM_READ_MEM) & confirm) begin
-				for(int i = 0; i < {1'b1,{WORD_WIDTH{1'b0}}}; i++) begin
-					if(pattern[i] ^ pattern_rb[i]) begin
+			if(state_r == MEM_TEST_SM_TALLY_MEM) begin
+				for(int i = 0; i < (WORD_WIDTH/4); i++) begin
+					if(pattern[i + (word_q_r * (WORD_WIDTH/4))] ^ pattern_rb[i + (word_q_r * (WORD_WIDTH/4)]) begin
 						bit_flip_count_r <= bit_flip_count_r + {{31{1'b0}},1'b1};
 					end
 				end
@@ -176,7 +207,7 @@ module mem_test_sm
 	assign direction_r = count_r[0];
 	
 	//output assignments
-	assign write = (state_r == MEM_TEST_SM_INITIALIZE);
+	assign write = (state_r == MEM_TEST_SM_INITIALIZE_MEM);
 	assign gen_word = pattern;
 	assign gen_address = gen_address_r;//address to generate read/write to
 	assign state = state_r;		//state the machine is in
