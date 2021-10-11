@@ -2,11 +2,11 @@
 //timescale here for sim
 `timescale 1ns / 1ps
 
-`define MEM_TEST_SM_START 				4'b0 //start state, loads input pattern/address into registers
-`define MEM_TEST_SM_INITIALIZE_MEM	4'b1 //initializes target mem area
-`define MEM_TEST_SM_HAMMER_MEM		4'b2 //generates reads to mem to hammer
-`define MEM_TEST_SM_READ_MEM			4'b3 //reads target mem area back
-`define MEM_TEST_SM_FINISH				4'b4 //finish
+`define MEM_TEST_SM_START 		4'd0 //start state, loads input pattern/address into registers
+`define MEM_TEST_SM_INITIALIZE_MEM	4'd1 //initializes target mem area
+`define MEM_TEST_SM_HAMMER_MEM		4'd2 //generates reads to mem to hammer
+`define MEM_TEST_SM_READ_MEM		4'd3 //reads target mem area back
+`define MEM_TEST_SM_FINISH		4'd4 //finish
 
 module mem_test_sm
 	#(
@@ -15,50 +15,50 @@ module mem_test_sm
 	  parameter ROW_WIDTH  = 'd12,		//row bits in address
 	  parameter ROW_POS    = 'd10,		//pos of row bits in address
 	  parameter COL_WIDTH  = 'd10,		//col bits in address
-	  parameter COL_POS	  = 'd0			//pos of col bits in address
+	  parameter COL_POS    = 'd0		//pos of col bits in address
 	  )
 	(
 	//these should be gotten from registers on startup
-	input [WORD_WIDTH-1:0] pattern,		//pattern written to address
-	input [ADDR_WIDTH-1:0] address,		//target address for attack (row)
-	input [31:0]		   	count,		//how many hammers to generate
+	input [WORD_WIDTH-1:0]  pattern,	//pattern written to address
+	input [ADDR_WIDTH-1:0]  address,	//target address for attack (row)
+	input [31:0]            count,		//how many hammers to generate
 	
 	//supplied by upper-level module
-	input						clk,			//clock that drives the circuit we are injecting instructions into
-	input						reset,		//reset to start state machine
-	input						confirm,		//bit stops/starts machine when generating addressses
-	input [WORD_WIDTH-1:0] pattern_rb, //pattern read back from address
+	input			clk,		//clock that drives the circuit we are injecting instructions into
+	input			reset,		//reset to start state machine
+	input			confirm,	//bit stops/starts machine when generating addressses
+	input [WORD_WIDTH-1:0]  pattern_rb,     //pattern read back from address
 	
 	//supplied to upper-level module
-	output [ADDR_WIDTH-1:0] gen_address,//address to generate read/write to
+	output [ADDR_WIDTH-1:0] gen_address,	//address to generate read/write to
 	output [WORD_WIDTH-1:0] gen_word,	//word to be written to address
-	output						write,		//indicates write over read. 1 = write, 0 = read
-	output  [3:0]				state,		//state the machine is in
+	output			write,		//indicates write over read. 1 = write, 0 = read
+	output [3:0]		state,		//state the machine is in
 	
 	//written to registers on termination
-	output [63:0]				bit_flip_count			//total number of recorded bit flips
+	output [63:0]		bit_flip_count	//total number of recorded bit flips
 	);
 	
 	//output signal registers
-	logic [ADDR_WIDTH-1:0] gen_address_r;	//register for generated address
+	logic  [ADDR_WIDTH-1:0] gen_address_r;	//register for generated address
 	
 	//state tracking
-	logic [31:0] count_r;						//current # of hammers done
-	logic [3:0]  state_r;						//state of state machine
-	logic 		 direction_r;					//direction of hammer ("left" or "right" attack)
-	logic [COL_WIDTH-1:0] word_r;				//current word being read/written to
+	logic  [31:0] 		count_r;	//current # of hammers done
+	logic  [3:0]  		state_r;	//state of state machine
+	logic 		 	direction_r;	//direction of hammer ("left" or "right" attack)
+	logic  [COL_WIDTH-1:0] 	word_r;		//current word being read/written to
 	
 	//data recording
-	logic [63:0] bit_flip_count_r;			//total bit flips recorded
+	logic  [63:0] 		bit_flip_count_r;//total bit flips recorded
 	
 	//state machine logic
 	always_ff@(posedge clk) begin
 		if(reset) begin
-			gen_address_r <= 'b0;
+			gen_address_r 	  <= 'b0;
 			count_r		  <= 'b0;
 			state_r		  <= 'b0;
 			word_r		  <= 'b0;
-			bit_flip_count_r <= 'b0;
+			bit_flip_count_r  <= 'b0;
 		end
 		else begin
 			//state transitions
@@ -178,9 +178,9 @@ module mem_test_sm
 	//output assignments
 	assign write = (state_r == MEM_TEST_SM_INITIALIZE);
 	assign gen_word = pattern;
-	assign gen_address = gen_address_r;//address to generate read/write to
-	assign state = state_r;		//state the machine is in
-	assign bit_flip_count = bit_flip_count_r;			//total number of recorded bit flips
+	assign gen_address = gen_address_r;			//address to generate read/write to
+	assign state = state_r;					//state the machine is in
+	assign bit_flip_count = bit_flip_count_r;		//total number of recorded bit flips
 	
 endmodule
 	
