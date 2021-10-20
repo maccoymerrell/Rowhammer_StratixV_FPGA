@@ -2,8 +2,6 @@
 //timescale here for sim
 `timescale 1ns / 1ps
 
-
-
 module mem_test_sm
 	#(
 	  parameter ADDR_WIDTH = 'd64,		//address width in bits
@@ -19,32 +17,31 @@ module mem_test_sm
 	  parameter MEM_TEST_SM_TALLY_MEM		= 4'd4, //tally all bit flips in word
 	  parameter MEM_TEST_SM_FINISH			= 4'd5 //finish
 	)
-	(	
+	(
 	//these should be gotten from registers on startup
-	input [WORD_WIDTH-1:0] pattern,		//pattern written to address
-	input [ADDR_WIDTH-1:0] address,		//target address for attack (row)
-	input [31:0]		   	count,		//how many hammers to generate
+	input [WORD_WIDTH-1:0]  pattern,	//pattern written to address
+	input [ADDR_WIDTH-1:0]  address,	//target address for attack (row)
+	input [31:0]            count,		//how many hammers to generate
 	
 	//supplied by upper-level module
-	input						clk,			//clock that drives the circuit we are injecting instructions into
-	input						reset,		//reset to start state machine
-	input						confirm,		//bit stops/starts machine when generating addressses
-	input [WORD_WIDTH-1:0] pattern_rb, //pattern read back from address
+	input			clk,		//clock that drives the circuit we are injecting instructions into
+	input			reset,		//reset to start state machine
+	input			confirm,	//bit stops/starts machine when generating addressses
+	input [WORD_WIDTH-1:0]  pattern_rb,     //pattern read back from address
 	
 	//supplied to upper-level module
-	output [ADDR_WIDTH-1:0] gen_address,//address to generate read/write to
+	output [ADDR_WIDTH-1:0] gen_address,	//address to generate read/write to
 	output [WORD_WIDTH-1:0] gen_word,	//word to be written to address
-	output						write,		//indicates write over read. 1 = write, 0 = read
-	output  [3:0]				state,		//state the machine is in
+	output			write,		//indicates write over read. 1 = write, 0 = read
+	output [3:0]		state,		//state the machine is in
 	
 	//written to registers on termination
-	output [63:0]				bit_flip_count			//total number of recorded bit flips
+	output [63:0]		bit_flip_count	//total number of recorded bit flips
 	);
 	
 	//output signal registers
-	logic [ADDR_WIDTH-1:0] gen_address_r;	//register for generated address
+	logic  [ADDR_WIDTH-1:0] gen_address_r;	//register for generated address
 	
-	//state tracking
 	logic [31:0] count_r;						//current # of hammers done
 	logic [3:0]  state_r;						//state of state machine
 	logic 		 direction_r;					//direction of hammer ("left" or "right" attack)
@@ -52,12 +49,12 @@ module mem_test_sm
 	logic [1:0]  word_q_r;						//current quarter of word
 	
 	//data recording
-	logic [63:0] bit_flip_count_r;			//total bit flips recorded
+	logic  [63:0] 		bit_flip_count_r;//total bit flips recorded
 	
 	//state machine logic
 	always_ff@(posedge clk) begin
 		if(reset) begin
-			gen_address_r <= 'b0;
+			gen_address_r 	  <= 'b0;
 			count_r		  <= 'b0;
 			state_r		  <= 'b0;
 			word_r		  <= 'b0;
@@ -189,7 +186,7 @@ module mem_test_sm
 			//total bit flips bit_flip_count_r
 			if(state_r == MEM_TEST_SM_TALLY_MEM) begin
 				for(int i = 0; i < (WORD_WIDTH/4); i++) begin
-					if(pattern[i + (word_q_r * (WORD_WIDTH/4))] ^ pattern_rb[i + (word_q_r * (WORD_WIDTH/4)]) begin
+					if(pattern[i + (word_q_r * (WORD_WIDTH/4))] ^ pattern_rb[i + (word_q_r * (WORD_WIDTH/4))]) begin
 						bit_flip_count_r <= bit_flip_count_r + {{31{1'b0}},1'b1};
 					end
 				end
@@ -209,9 +206,9 @@ module mem_test_sm
 	//output assignments
 	assign write = (state_r == MEM_TEST_SM_INITIALIZE_MEM);
 	assign gen_word = pattern;
-	assign gen_address = gen_address_r;//address to generate read/write to
-	assign state = state_r;		//state the machine is in
-	assign bit_flip_count = bit_flip_count_r;			//total number of recorded bit flips
+	assign gen_address = gen_address_r;			//address to generate read/write to
+	assign state = state_r;					//state the machine is in
+	assign bit_flip_count = bit_flip_count_r;		//total number of recorded bit flips
 	
 endmodule
 	
