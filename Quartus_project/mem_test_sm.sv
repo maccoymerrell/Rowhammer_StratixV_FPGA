@@ -9,10 +9,12 @@ module mem_test_sm
 	  parameter ROW_WIDTH  = 'd12,		//row bits in address
 	  parameter ROW_POS    = 'd10,		//pos of row bits in address
 	  parameter COL_WIDTH  = 'd10,		//col bits in address
-	  parameter COL_POS	  = 'd0,			//pos of col bits in address
+	  parameter COL_POS	  = 'd1,			//pos of col bits in address
 	  parameter MEM_TEST_SM_START   			= 4'd0, //start state, loads input pattern/address into registers
 	  parameter MEM_TEST_SM_INITIALIZE_MEM	= 4'd1, //initializes target mem area
+	  parameter MEM_TEST_SM_ADDRESS_RESET_0= 4'd6, //resets output address before hammering
 	  parameter MEM_TEST_SM_HAMMER_MEM		= 4'd2, //generates reads to mem to hammer
+	  parameter MEM_TEST_SM_ADDRESS_RESET_1= 4'd7, //resets output address after hammering
 	  parameter MEM_TEST_SM_READ_MEM			= 4'd3, //reads target mem area back
 	  parameter MEM_TEST_SM_TALLY_MEM		= 4'd4, //tally all bit flips in word
 	  parameter MEM_TEST_SM_FINISH			= 4'd5 //finish
@@ -69,20 +71,26 @@ module mem_test_sm
 					state_r <= MEM_TEST_SM_INITIALIZE_MEM;
 				end
 				MEM_TEST_SM_INITIALIZE_MEM: begin //once all words in target row have been written to, advance
-					if((word_r < {COL_WIDTH{1'b1}}) & confirm) begin
+					if((word_r == {COL_WIDTH{1'b1}}) & confirm) begin
+						state_r <= MEM_TEST_SM_ADDRESS_RESET_0;
+					end
+					else begin
 						state_r <= MEM_TEST_SM_INITIALIZE_MEM;
+					end
+				end
+				MEM_TEST_SM_ADDRESS_RESET_0:begin
+					state_r <= MEM_TEST_SM_HAMMER_MEM;
+				end
+				MEM_TEST_SM_HAMMER_MEM: begin //once all hammers done, advance
+					if((count_r == count) & confirm) begin
+						state_r <= MEM_TEST_SM_ADDRESS_RESET_1;
 					end
 					else begin
 						state_r <= MEM_TEST_SM_HAMMER_MEM;
 					end
 				end
-				MEM_TEST_SM_HAMMER_MEM: begin //once all hammers done, advance
-					if((count_r == count) & confirm) begin
-						state_r <= MEM_TEST_SM_READ_MEM;
-					end
-					else begin
-						state_r <= MEM_TEST_SM_HAMMER_MEM;
-					end
+				MEM_TEST_SM_ADDRESS_RESET_1:begin
+					state_r <= MEM_TEST_SM_READ_MEM;
 				end
 				MEM_TEST_SM_READ_MEM: begin //once all words in target row have been read from, advance
 						if(confirm) begin
@@ -114,44 +122,25 @@ module mem_test_sm
 			//now handle the logic for the wires
 			//gen_address_r
 			if(state_r == MEM_TEST_SM_INITIALIZE_MEM || state_r == MEM_TEST_SM_READ_MEM) begin
-				if(COL_POS == 1'b0) begin
-					gen_address_r <= {address[ADDR_WIDTH-1:COL_WIDTH],word_r};
-				end
-				else if(COL_POS + COL_WIDTH == ADDR_WIDTH) begin
-					gen_address_r <= {word_r, address[COL_POS - 1:0]};
-				end
-				else begin
-					gen_address_r <= {address[ADDR_WIDTH-1:COL_POS + COL_WIDTH], word_r, address[COL_POS-1:0]};
-				end
+				gen_address_r[COL_WIDTH + COL_POS - 1 : COL_POS] <= word_r;
 			end
 			else if(state_r == MEM_TEST_SM_HAMMER_MEM) begin
-				if(ROW_POS == 1'b0) begin
-					gen_address_r <= direction_r ? {address[ADDR_WIDTH-1:ROW_WIDTH],address[ROW_WIDTH-1:0] - 'b1} :
-															 {address[ADDR_WIDTH-1:ROW_WIDTH],address[ROW_WIDTH-1:0] + 'b1};
-				end
-				else if(ROW_POS + ROW_WIDTH == ADDR_WIDTH) begin
-					gen_address_r <= direction_r ? {address[ADDR_WIDTH-1:ROW_POS] - 'b1, address[ROW_POS - 1:0]} :
-															 {address[ADDR_WIDTH-1:ROW_POS] + 'b1, address[ROW_POS - 1:0]};
-				end
-				else begin
-					gen_address_r <= direction_r ? {address[ADDR_WIDTH-1:ROW_POS + ROW_WIDTH], address[ROW_POS + ROW_WIDTH-1:ROW_POS] - 'b1, address[ROW_POS-1:0]} : 
-															 {address[ADDR_WIDTH-1:ROW_POS + ROW_WIDTH], address[ROW_POS + ROW_WIDTH-1:ROW_POS] + 'b1, address[ROW_POS-1:0]};
-				end
+				gen_address_r[ROW_WIDTH + ROW_POS - 1: ROW_POS] <= direction_r ? (gen_address_r[ROW_WIDTH + ROW_POS - 1: ROW_POS] - 1'b1) :
+																									  (gen_address_r[ROW_WIDTH + ROW_POS - 1: ROW_POS] + 1'b1);
 			end
 			else if(state_r == MEM_TEST_SM_TALLY_MEM) begin
 				gen_address_r <= gen_address_r;
 			end
 			else begin
-				gen_address_r <= 'b0;
+				gen_address_r <= address;
 			end
-			
 			//word_r
-			if(state_r == MEM_TEST_SM_INITIALIZE_MEM | state_r == MEM_TEST_SM_READ_MEM) begin
-				if((word_r == {COL_WIDTH{1'b1}}) & confirm) begin
-					word_r <= 'b0;
-				end
-				else begin
+			if(state_r == MEM_TEST_SM_INITIALIZE_MEM | state_r == MEM_TEST_SM_READ_MEM | state_r == MEM_TEST_SM_TALLY_MEM) begin
+				if(confirm & state_r != MEM_TEST_SM_TALLY_MEM) begin
 					word_r <= word_r + {{(COL_WIDTH-1){1'b0}},1'b1};
+				end
+				else begin	
+					word_r <= word_r;
 				end
 			end
 			else begin
@@ -160,12 +149,7 @@ module mem_test_sm
 			
 			//word_q_r
 			if(state_r == MEM_TEST_SM_TALLY_MEM) begin
-				if(word_q_r == 2'b11) begin
-					word_q_r <= 'b0;
-				end
-				else begin
-					word_q_r <= word_q_r + 2'b01;
-				end
+				word_q_r <= word_q_r + 2'b01;
 			end
 			else begin
 				word_q_r <= 'b0;
@@ -173,11 +157,11 @@ module mem_test_sm
 			
 			//count_r
 			if(state_r == MEM_TEST_SM_HAMMER_MEM) begin
-				if((count_r == {32{1'b1}}) & confirm) begin
-					count_r <= 'b0;
+				if(confirm) begin
+					count_r <= count_r + 32'd1;
 				end
 				else begin
-					count_r <= count_r + 32'd1;
+					count_r <= count_r;
 				end
 			end
 			else begin
