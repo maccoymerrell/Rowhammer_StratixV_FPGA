@@ -32,7 +32,8 @@ module mem_test_sm
 	//supplied to upper-level module
 	output [ADDR_WIDTH-1:0] gen_address,	//address to generate read/write to
 	output [WORD_WIDTH-1:0] gen_word,	//word to be written to address
-	output			write,		//indicates write over read. 1 = write, 0 = read
+	output			write,		//indicates write
+	output			read,			//indicates read
 	output [3:0]		state,		//state the machine is in
 	
 	//written to registers on termination
@@ -205,6 +206,7 @@ module mem_test_sm
 	
 	//output assignments
 	assign write = (state_r == MEM_TEST_SM_INITIALIZE_MEM);
+	assign read  = (state_r == MEM_TEST_SM_READ_MEM || state_r == MEM_TEST_SM_HAMMER_MEM);
 	assign gen_word = pattern;
 	assign gen_address = gen_address_r;			//address to generate read/write to
 	assign state = state_r;					//state the machine is in
