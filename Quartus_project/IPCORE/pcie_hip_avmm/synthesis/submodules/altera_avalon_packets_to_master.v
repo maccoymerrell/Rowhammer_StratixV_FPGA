@@ -37,6 +37,7 @@ module altera_avalon_packets_to_master (
       output wire         out_startofpacket,
       output wire         out_endofpacket,
 
+		//this is the interface we need to hijack
       // Interface: MM out
       output wire [31: 0] address,
       input  wire [31: 0] readdata,
@@ -55,6 +56,16 @@ module altera_avalon_packets_to_master (
     wire          fifo_write;
     wire          fifo_write_waitrequest;
     
+	 //extra wires for mem_test_sm
+	 wire [3:0]		state;
+	 
+	 //dummy wires to replace the connections the mem_test_sm took
+	 wire	[31:0]	dummy_address;
+	 wire [31:0]	dummy_writedata;
+	 wire [3:0]		dummy_byteenable;
+	 wire				dummy_read;
+	 wire				dummy_write;
+	 
    // ---------------------------------------------------------------------
    //| Parameter Declarations
    // ---------------------------------------------------------------------
@@ -63,6 +74,41 @@ module altera_avalon_packets_to_master (
    parameter FIFO_WIDTHU           = 1;
    parameter FAST_VER              = 0;
    
+	//lets insert our own module
+	//we need to mux the proper signals, ideally we insert our own data to read/write on MM
+	//and let the existing modules control everything else
+	//hopefully, this will allow fifo to be bypassed entirely
+	
+	//connect gen_address 	with address
+	//connect gen_word		with writedata
+	//connect read/write    with read/write
+	//connect wait_request and read_data_valid with waitrequest and readdatavalid
+	//connect 4'b1111			with byteenable
+	//connect pattern_rb    with readdata
+	
+   mem_test_sm
+				#(
+					.ADDR_WIDTH			(32),		//address width in bits
+					.WORD_WIDTH			(32),		//word width in bits
+					.ROW_WIDTH 			(12),		//row bits in address
+					.ROW_POS   			(10),		//pos of row bits in address
+					.COL_WIDTH 			(10),		//col bits in address
+					.COL_POS	  			(0 )		//pos of col bits in address
+				)
+				mem_packet_gen (
+					.clk					(clk),
+					.reset				(!reset_n),
+					.wait_request		(waitrequest),
+					.read_data_valid	(readdatavalid),
+					.pattern_rb			(readdata),
+							
+					.gen_word			(writedata),
+					.gen_address		(address),
+					.state				(state),
+					.write				(write),
+					.read					(read)
+				);
+				
    generate
        if (FAST_VER) begin
             packets_to_fifo p2f (
@@ -73,12 +119,12 @@ module altera_avalon_packets_to_master (
                 .in_data             (in_data),
                 .in_startofpacket    (in_startofpacket),
                 .in_endofpacket      (in_endofpacket),
-                .address             (address),
+                .address             (dummy_address),
                 .readdata            (readdata),
-                .read                (read),
-                .write               (write),
-                .byteenable          (byteenable),
-                .writedata           (writedata),
+                .read                (dummy_read),
+                .write               (dummy_write),
+                .byteenable          (dummy_byteenable),
+                .writedata           (dummy_writedata),
                 .waitrequest         (waitrequest),
                 .readdatavalid       (readdatavalid),
                 .fifo_writedata      (fifo_writedata),
@@ -121,12 +167,12 @@ module altera_avalon_packets_to_master (
                 .in_data             (in_data),
                 .in_startofpacket    (in_startofpacket),
                 .in_endofpacket      (in_endofpacket),
-                .address             (address),
+                .address             (dummy_address),
                 .readdata            (readdata),
-                .read                (read),
-                .write               (write),
+                .read                (dummy_read),
+                .write               (dummy_write),
                 .byteenable          (byteenable),
-                .writedata           (writedata),
+                .writedata           (dummy_writedata),
                 .waitrequest         (waitrequest),
                 .readdatavalid       (readdatavalid),
                 .out_ready           (out_ready),

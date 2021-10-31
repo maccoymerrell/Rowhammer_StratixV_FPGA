@@ -11,36 +11,44 @@ module mem_test_sm
 	  parameter COL_WIDTH  = 'd10,		//col bits in address
 	  parameter COL_POS	  = 'd1,			//pos of col bits in address
 	  parameter MEM_TEST_SM_START   			= 4'd0, //start state, loads input pattern/address into registers
+	  parameter MEM_TEST_SM_LOAD_COUNT		= 4'd8, //loads count value
+	  parameter MEM_TEST_SM_LOAD_ADDRESS	= 4'd9, //loads address value
+	  parameter MEM_TEST_SM_LOAD_PATTERN	= 4'd10,//loads pattern value
 	  parameter MEM_TEST_SM_INITIALIZE_MEM	= 4'd1, //initializes target mem area
 	  parameter MEM_TEST_SM_ADDRESS_RESET_0= 4'd6, //resets output address before hammering
 	  parameter MEM_TEST_SM_HAMMER_MEM		= 4'd2, //generates reads to mem to hammer
 	  parameter MEM_TEST_SM_ADDRESS_RESET_1= 4'd7, //resets output address after hammering
 	  parameter MEM_TEST_SM_READ_MEM			= 4'd3, //reads target mem area back
 	  parameter MEM_TEST_SM_TALLY_MEM		= 4'd4, //tally all bit flips in word
+	  parameter MEM_TEST_SM_STOR_FLIPS		= 4'd11,//store the total bit flips (actual just enable writes)
 	  parameter MEM_TEST_SM_FINISH			= 4'd5 //finish
 	)
 	(
-	//these should be gotten from registers on startup
-	input [WORD_WIDTH-1:0]  pattern,	//pattern written to address
-	input [ADDR_WIDTH-1:0]  address,	//target address for attack (row)
-	input [31:0]            count,		//how many hammers to generate
 	
 	//supplied by upper-level module
-	input			clk,		//clock that drives the circuit we are injecting instructions into
-	input			reset,		//reset to start state machine
-	input			confirm,	//bit stops/starts machine when generating addressses
-	input [WORD_WIDTH-1:0]  pattern_rb,     //pattern read back from address
+	input							clk,						//clock that drives the circuit we are injecting instructions into
+	input							reset,					//reset to start state machine
+	input							wait_request,			//bit stops/starts machine when set high
+	input							read_data_valid,		//bit stops state machine on read unless high
+	input [WORD_WIDTH-1:0]  pattern_rb,    		//pattern read back from address
 	
 	//supplied to upper-level module
 	output [ADDR_WIDTH-1:0] gen_address,	//address to generate read/write to
-	output [WORD_WIDTH-1:0] gen_word,	//word to be written to address
-	output			write,		//indicates write
-	output			read,			//indicates read
-	output [3:0]		state,		//state the machine is in
-	
-	//written to registers on termination
-	output [63:0]		bit_flip_count	//total number of recorded bit flips
+	output [WORD_WIDTH-1:0] gen_word,		//word to be written to address
+	output						write,			//indicates write
+	output						read,				//indicates read
+	output [3:0]				state			//state the machine is in
 	);
+	
+	//retrieved from memory on startup
+	logic [WORD_WIDTH-1:0]  pattern;			//pattern written to address
+	logic [ADDR_WIDTH-1:0]  address;			//target address for attack (row)
+	logic [31:0]            count;			//how many hammers to generate
+	
+	//values to facilitate memory loading
+	logic [63:0]				qdata;			//data read from memory
+	logic [1:0]					raddr;			//address of data read from memory
+	logic							wren;				//write enable
 	
 	//output signal registers
 	logic  [ADDR_WIDTH-1:0] gen_address_r;	//register for generated address
@@ -53,6 +61,7 @@ module mem_test_sm
 	
 	//data recording
 	logic  [63:0] 		bit_flip_count_r;//total bit flips recorded
+	logic					confirm;
 	
 	//state machine logic
 	always_ff@(posedge clk) begin
@@ -63,11 +72,22 @@ module mem_test_sm
 			word_r		  <= 'b0;
 			word_q_r		  <= 'b0;
 			bit_flip_count_r <= 'b0;
+			raddr <= 'b0;
+			wren  <= 'b0;
 		end
 		else begin
 			//state transitions
 			case(state_r)
 				MEM_TEST_SM_START: begin
+					state_r <= MEM_TEST_SM_LOAD_COUNT;
+				end
+				MEM_TEST_SM_LOAD_COUNT: begin
+					state_r <= MEM_TEST_SM_LOAD_ADDRESS;
+				end
+				MEM_TEST_SM_LOAD_ADDRESS: begin
+					state_r <= MEM_TEST_SM_LOAD_PATTERN;
+				end
+				MEM_TEST_SM_LOAD_PATTERN: begin
 					state_r <= MEM_TEST_SM_INITIALIZE_MEM;
 				end
 				MEM_TEST_SM_INITIALIZE_MEM: begin //once all words in target row have been written to, advance
@@ -182,19 +202,69 @@ module mem_test_sm
 			else begin
 				bit_flip_count_r <= 'b0;
 			end
+			
+			//load & initialization
+			if(state_r == MEM_TEST_SM_START) begin
+				raddr <= 2'b00;
+				address <= address;
+				pattern <= pattern;
+				count <= count;
+			end
+			else if(state_r == MEM_TEST_SM_LOAD_ADDRESS) begin
+				raddr <= 2'b01;
+				address <= qdata[ADDR_WIDTH-1:0];
+				count <= count;
+				pattern <= pattern;
+			end
+			else if(state_r == MEM_TEST_SM_LOAD_COUNT) begin
+				raddr <= 2'b10;
+				count <= qdata[31:0];
+				address <= address;
+				pattern <= pattern;
+			end
+			else if(state_r == MEM_TEST_SM_LOAD_PATTERN) begin
+				pattern <= qdata[WORD_WIDTH-1:0];
+				raddr <= 2'b00;
+				count <= count;
+				address <= address;
+			end
+			else begin
+				raddr <=2'b00;
+				count <= count;
+				address <= address;
+				pattern <= pattern;
+			end
+			
+			//write result to mem
+			if(state_r == MEM_TEST_SM_STOR_FLIPS) begin
+				wren <= 1'b1;
+			end
+			else begin
+				wren <= 1'b0;
+			end
 		end
 	end
 	
 	//comb logic
 	assign direction_r = count_r[0];
+	assign confirm = !(wait_request || (!read_data_valid & state_r == MEM_TEST_SM_READ_MEM));
 	
 	//output assignments
 	assign write = (state_r == MEM_TEST_SM_INITIALIZE_MEM);
 	assign read  = (state_r == MEM_TEST_SM_READ_MEM || state_r == MEM_TEST_SM_HAMMER_MEM);
 	assign gen_word = pattern;
-	assign gen_address = gen_address_r;			//address to generate read/write to
-	assign state = state_r;					//state the machine is in
-	assign bit_flip_count = bit_flip_count_r;		//total number of recorded bit flips
+	assign gen_address = gen_address_r;				//address to generate read/write to
+	assign state = state_r;								//state the machine is in
+	
+	//module connections
+	mem_loader	mem_loader_inst (
+	.clock 		(clk),
+	.data 		(bit_flip_count_r),
+	.rdaddress 	(raddr),
+	.wraddress 	(2'b11),
+	.wren 		(wren),
+	.q 			(qdata)
+	);
 	
 endmodule
 	
