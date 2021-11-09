@@ -47,7 +47,7 @@ module mem_test_sm
 	
 	//values to facilitate memory loading
 	logic [63:0]				qdata;			//data read from memory
-	logic [1:0]					raddr;			//address of data read from memory
+	logic [4:0]					raddr;			//address of data read from memory
 	logic							wren;				//write enable
 	
 	//output signal registers
@@ -205,31 +205,31 @@ module mem_test_sm
 			
 			//load & initialization
 			if(state_r == MEM_TEST_SM_START) begin
-				raddr <= 2'b00;
+				raddr <= 5'b00000;
 				address <= address;
 				pattern <= pattern;
 				count <= count;
 			end
 			else if(state_r == MEM_TEST_SM_LOAD_ADDRESS) begin
-				raddr <= 2'b01;
+				raddr <= 5'b00001;
 				address <= qdata[ADDR_WIDTH-1:0];
 				count <= count;
 				pattern <= pattern;
 			end
 			else if(state_r == MEM_TEST_SM_LOAD_COUNT) begin
-				raddr <= 2'b10;
+				raddr <= 5'b00010;
 				count <= qdata[31:0];
 				address <= address;
 				pattern <= pattern;
 			end
 			else if(state_r == MEM_TEST_SM_LOAD_PATTERN) begin
 				pattern <= qdata[WORD_WIDTH-1:0];
-				raddr <= 2'b00;
+				raddr <= 5'b00000;
 				count <= count;
 				address <= address;
 			end
 			else begin
-				raddr <=2'b00;
+				raddr <=2'b00011;
 				count <= count;
 				address <= address;
 				pattern <= pattern;
@@ -260,8 +260,7 @@ module mem_test_sm
 	mem_loader	mem_loader_inst (
 	.clock 		(clk),
 	.data 		(bit_flip_count_r),
-	.rdaddress 	(raddr),
-	.wraddress 	(2'b11),
+	.address 	(raddr),
 	.wren 		(wren),
 	.q 			(qdata)
 	);
