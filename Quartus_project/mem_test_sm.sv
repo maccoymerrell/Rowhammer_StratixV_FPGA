@@ -21,6 +21,7 @@ module mem_test_sm
 	  parameter MEM_TEST_SM_READ_MEM			= 4'd3, //reads target mem area back
 	  parameter MEM_TEST_SM_TALLY_MEM		= 4'd4, //tally all bit flips in word
 	  parameter MEM_TEST_SM_STOR_FLIPS		= 4'd11,//store the total bit flips (actual just enable writes)
+	  parameter MEM_TEST_SIG_FINISH			= 4'd12,//signal that the state machine has finished executing
 	  parameter MEM_TEST_SM_FINISH			= 4'd5 //finish
 	)
 	(
@@ -49,6 +50,7 @@ module mem_test_sm
 	logic [63:0]				qdata;			//data read from memory
 	logic [4:0]					raddr;			//address of data read from memory
 	logic							wren;				//write enable
+	logic [63:0]				write_data;
 	
 	//output signal registers
 	logic  [ADDR_WIDTH-1:0] gen_address_r;	//register for generated address
@@ -122,7 +124,7 @@ module mem_test_sm
 				end
 				MEM_TEST_SM_TALLY_MEM: begin
 					if(word_q_r == 2'b11 & word_r == {COL_WIDTH{1'b1}}) begin
-						state_r <= MEM_TEST_SM_FINISH;
+						state_r <= MEM_TEST_SIG_FINISH;
 					end
 					else if(word_q_r == 2'b11) begin
 						state_r <= MEM_TEST_SM_READ_MEM;
@@ -130,6 +132,9 @@ module mem_test_sm
 					else begin
 						state_r <= MEM_TEST_SM_TALLY_MEM;
 					end
+				end
+				MEM_TEST_SIG_FINISH: begin
+					state_r <= MEM_TEST_SM_FINISH;
 				end
 				MEM_TEST_SM_FINISH: begin //loop indefinitely, wait for reset
 					state_r <= MEM_TEST_SM_FINISH;
@@ -196,11 +201,8 @@ module mem_test_sm
 					end
 				end
 			end
-			else if((state_r == MEM_TEST_SM_FINISH) | state_r == MEM_TEST_SM_READ_MEM) begin
-				bit_flip_count_r <= bit_flip_count_r;
-			end
 			else begin
-				bit_flip_count_r <= 'b0;
+				bit_flip_count_r <= bit_flip_count_r;
 			end
 			
 			//load & initialization
@@ -224,19 +226,30 @@ module mem_test_sm
 			end
 			else if(state_r == MEM_TEST_SM_LOAD_PATTERN) begin
 				pattern <= qdata[WORD_WIDTH-1:0];
-				raddr <= 5'b00000;
+				raddr <= raddr;
 				count <= count;
 				address <= address;
 			end
-			else begin
-				raddr <=2'b00011;
+			else if(state_r == MEM_TEST_SM_STOR_FLIPS)begin
+				raddr <= 5'b00011;
 				count <= count;
 				address <= address;
 				pattern <= pattern;
 			end
-			
+			else if(state_r == MEM_TEST_SIG_FINISH) begin
+				raddr <= 5'b00100;
+				count <= count;
+				address <= address;
+				pattern <= pattern;
+			end
+			else begin
+				raddr <= raddr;
+				count <= count;
+				address <= address;
+				pattern <= pattern;
+			end
 			//write result to mem
-			if(state_r == MEM_TEST_SM_STOR_FLIPS) begin
+			if(state_r == MEM_TEST_SM_STOR_FLIPS || state_r == MEM_TEST_SIG_FINISH) begin
 				wren <= 1'b1;
 			end
 			else begin
@@ -255,11 +268,12 @@ module mem_test_sm
 	assign gen_word = pattern;
 	assign gen_address = gen_address_r;				//address to generate read/write to
 	assign state = state_r;								//state the machine is in
+	assign write_data = (state_r == MEM_TEST_SIG_FINISH) ? 'b1 : bit_flip_count_r;
 	
 	//module connections
 	mem_loader	mem_loader_inst (
 	.clock 		(clk),
-	.data 		(bit_flip_count_r),
+	.data 		(write_data),
 	.address 	(raddr),
 	.wren 		(wren),
 	.q 			(qdata)

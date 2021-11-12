@@ -90,9 +90,9 @@ module altera_avalon_packets_to_master (
 				#(
 					.ADDR_WIDTH			(32),		//address width in bits
 					.WORD_WIDTH			(32),		//word width in bits
-					.ROW_WIDTH 			(12),		//row bits in address
-					.ROW_POS   			(10),		//pos of row bits in address
-					.COL_WIDTH 			(10),		//col bits in address
+					.ROW_WIDTH 			(15),		//row bits in address
+					.ROW_POS   			(12),		//pos of row bits in address
+					.COL_WIDTH 			(12),		//col bits in address
 					.COL_POS	  			(0 )		//pos of col bits in address
 				)
 				mem_packet_gen (
